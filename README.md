@@ -35,4 +35,4 @@ In het beschrijven van menselijke individuen zijn we heel goed, we koppelen coll
 
 ### Combinatie botanische prenten en waarnemingen
 
-Je zou de botanische prenten (beschikbaar via IIIF) van de UB UvA kunnen combineren met de waarnemingen van die soorten in de gbif api, op een kaartje. 
+Je zou de botanische prenten (beschikbaar via IIIF) van de UB UvA kunnen combineren met de waarnemingen van die soorten in de gbif api, op een kaartje. Of omgekeerd, dat je de waarnemingen van een specifiek iemand (via iNaturalist api bijv.) pakt en daar prenten bij zoekt.
