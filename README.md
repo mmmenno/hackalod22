@@ -21,6 +21,9 @@ Wat gaan we doen op de HackaLOD?
 
 Vorig jaar is er al geëxperimenteerd met een [landschappen applicatie](https://github.com/mmmenno/landschappen), waarin allerlei gegevens bij natuurgebieden (gegevens van Wikidata, Topotijdreis, Commons afbeeldingen, GBIF waarnemingen) werden gezocht. Meer een inventarisatie dan een 'killer-app'. Misschien moeten we ipv één applicatie 'waarin alles samenkomt' verschillende kleine applicaties maken die een bepaald deelaspect belichten?
 
+Misschien geeft [https://hetwilde.nl/](https://hetwilde.nl/) ook nog ideeën. Trouwens, dat domein zouden we ook voor de hackalod kunnen gebruiken.
+
+
 ### Natuurgebieden + Topotijdreis
 
 Het historisch besef is niet altijd even groot als het om veranderingen in het landschap gaat. Er wordt bijvoorbeeld wel beweerd dat 'er alleen maar landbouwgrond verdwijnt'. Goed om daar even historische kaart bij te pakken. Je kan daarop de contouren van de huidige Natura2000 gebieden leggen, maar interessanter is waarschijnlijk om de veranderingen (net) buiten die gebieden te laten zien.
