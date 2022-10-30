@@ -2,6 +2,8 @@
 
 Wat gaan we doen op de HackaLOD?
 
+![voorstel](imgs/apps-voorstel.jpg)
+
 ## Databronnen
 
 - Topotijdreis (tiles van jaar naar keuze zijn op te vragen)
