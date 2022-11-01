@@ -4,6 +4,10 @@ Wat gaan we doen op de HackaLOD?
 
 ![voorstel](imgs/apps-voorstel.jpg)
 
+## Al gedaan:
+
+- Natura2000 gebieden van Naturalis api verbonden met Wikidata identifiers, in [data/natura2000-met-wikidata.csv](data/natura2000-met-wikidata.csv)
+
 ## Databronnen
 
 - Topotijdreis (tiles van jaar naar keuze zijn op te vragen)

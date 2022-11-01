@@ -22,6 +22,9 @@ $localityname = "Eilandspolder%20(Natura%202000)"; // moet je maar net weten, we
 $localityname = "Kennemerduinen%20(PWN)"; // moet je maar net weten, we hebben koppeling naturalis gebieden met qids nodig!
 $localityname = "Duinen%20Wijk%20aan%20Zee%20(Landschap%20Noord-Holland)"; // moet je maar net weten, we hebben koppeling naturalis gebieden met qids nodig!
 $localityname = "Maasduinen%20(Natura%202000)"; // moet je maar net weten, we hebben koppeling naturalis gebieden met qids nodig!
+$localityname = "Ulvenhoutse%20bos%20(Staatsbosbeheer)"; // met grove den!
+
+
 
 $apiurl = "https://api.biodiversitydata.nl/v2/geo/getGeoJsonForLocality/" . $localityname;
 $json = file_get_contents($apiurl);
