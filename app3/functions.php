@@ -7,7 +7,7 @@ function getSparqlResults($endpoint,$query){
 	// params
 	$url = $endpoint . '?query=' . urlencode($query) . "&format=json";
 	$urlhash = hash("md5",$url);
-	$datafile = __DIR__ . "/data/" . $urlhash . ".json";
+	$datafile = __DIR__ . "/sparqldata/" . $urlhash . ".json";
 	$maxcachetime = 60*60*24*7;
 	
 	// get cached data if recent
