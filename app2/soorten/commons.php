@@ -34,10 +34,10 @@ function commonsImages($taxonId, $fromNozeman = false) {
     $url = $endpoint . '?query=' . urlencode($query) . "&format=json";
     $urlhash = hash("md5", $url);
     $datafile = __DIR__ . "/../../app3/sparqldata/" . $urlhash . ".json";
-
+//print $datafile;
     // get cached data if exists
     if (file_exists($datafile)) {
-        return json_decode(file_get_contents($datafile));
+        return json_decode(file_get_contents($datafile), true)['results']['bindings'];
     }
 
     $ch = curl_init();
