@@ -7,6 +7,7 @@ function commonsImages($taxonId) {
             ?file wdt:P180 wd:$taxonId.
             ?file wdt:P180 ?depicted .
             ?file schema:url ?image .
+            ?file rdf:type schema:ImageObject . # don't produce sounds ;)
             #  ?depicted wdt:P105 wd:Q7432 .
             VALUES ?taxon { wd:Q7432 wd:Q34740 }
             SERVICE <https://query.wikidata.org/sparql> {
