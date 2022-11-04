@@ -9,6 +9,22 @@ $radius = 10;
 $qid = "Q13742779";
 $year = 1950;
 
+$gebieden_data = "../data/natura2000-met-wikidata.csv";
+
+$options = "";
+if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
+    while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+          $options .= "<option value=\"" . $row[0] ."\">" . $row[1] . "</option>\n";
+    }
+    fclose($handle);
+}
+
+if(!isset($_GET['gebied'])){
+  $gebied = "Q13742779";      // Kennemerduinen
+}else{
+  $gebied = $_GET['gebied'];
+}
+
 ?>
 
 <script
@@ -20,7 +36,6 @@ $year = 1950;
 
   <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==" crossorigin=""></script>
 
-
   <!-- Esri Leaflet -->
   <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"></script>
 
@@ -28,21 +43,30 @@ $year = 1950;
   <script src="https://unpkg.com/proj4@2.5.0/dist/proj4-src.js"></script>
   <script src="https://unpkg.com/proj4leaflet@1.0.1"></script>
 
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="assets/css/styles.css" />
-  
-    </script>
-    
 
-<div id="map" style="height: 400px; margin-bottom: 24px; width: 98%;"></div>
+</script>
 
-<div id="maptt" style="height: 400px; margin-bottom: 24px; width: 98%;"></div>
+<form action="index.php" method="get">
+<select name="gebied">
+    <?= $options ?>
+</select>
+<button type="submit">GO</button>
+</form>
+
+<p>
+Selected: <?= $gebied ?>
+</p>
+
+<!--<div id="map" style="height: 400px; margin-bottom: 24px; width: 98%;"></div>-->
+
+<div id="maptt" style="height: 800px; margin-bottom: 24px; width: 98%;"></div>
 
 <script>
   $(document).ready(function() {
-    createMap();
+//    createMap();
     createTopoTijdReisMap();
 //    refreshMap();
   });
@@ -81,21 +105,11 @@ $year = 1950;
         resolutions: [3251.206502413005,1625.6032512065026,812.8016256032513,406.40081280162565,203.20040640081282,101.60020320040641, 50.800101600203206,25.400050800101603,12.700025400050801,6.350012700025401,3.1750063500127004,1.5875031750063502,0.7937515875031751,0.39687579375158755,0.19843789687579377,0.09921894843789689,0.04960947421894844]
     });
 
-
-//    var topotijdreislayer = L.esri.tiledMapLayer({
-//        url: 'https://tiles1.arcgis.com/tiles/nSZVuSZjHpEZZbRo/arcgis/rest/services/Historische_tijdreis_1950/flet wmts amersfoort coordinatenMapServer',
-//        maxZoom: 11,
-//        minZoom: 0,
-//    });
-//
-//    var maptt = L.map('maptt', {
-//        crs: RD,
-//        layers: [topotijdreislayer]
-//    });
-
-
     var topotijdreislayer = L.tileLayer('https://tiles.arcgis.com/tiles/nSZVuSZjHpEZZbRo/arcgis/rest/services/Historische_tijdreis_<?= $year ?>/MapServer/WMTS/tile/1.0.0/Historische_tijdreis_<?= $year ?>/default/default028mm/{z}/{y}/{x}',
     { WMTS: false, attribution: 'Kadaster (TopoTijdReis <?= $year ?>)' });
+
+    var topotijdreislayer2019 = L.tileLayer('https://tiles.arcgis.com/tiles/nSZVuSZjHpEZZbRo/arcgis/rest/services/Historische_tijdreis_2019/MapServer/WMTS/tile/1.0.0/Historische_tijdreis_2019/default/default028mm/{z}/{y}/{x}',
+    { WMTS: false, attribution: 'Kadaster (TopoTijdReis 2019)' });
 
     maptt = L.map('maptt', {
         crs: RD,
@@ -103,11 +117,16 @@ $year = 1950;
         zoomControl: false,
         minZoom: 1,
         maxZoom: 11,
-        layers: [topotijdreislayer]
+        layers: [topotijdreislayer, topotijdreislayer2019]
     });
     L.control.zoom({
         position: 'bottomright'
     }).addTo(maptt);
+
+    //L.control.layers([topotijdreislayer, topotijdreislayer2019]).addTo(maptt);
+    var layerControl = L.control.layers().addTo(maptt);
+    layerControl.addBaseLayer(topotijdreislayer2019, "Topotijdreis NU")
+    layerControl.addBaseLayer(topotijdreislayer, "Topotijdreis TOEN")
 
     //map view still gets set with Latitude/Longitude,
     //BUT the zoomlevel is now different (it uses the resolutions defined in our projection tileset above)
