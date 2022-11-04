@@ -33,7 +33,7 @@ $vogelen = json_decode(file_get_contents('../../data/voogelen.json'), true);
                     }
                     $dummy = $vogel['depicted'];
 
-                    $label = $vogel['depictedLabel'];
+                    $label = $vogel['depictedLabelNL'];
                     $wikiID = trim($vogel['depicted'], 'http://www.wikidata.org/entity/');
                     ?>
                     <li><a href="soort.php?taxonId=<?= $wikiID ?>"><?= $label ?></a></li>
@@ -47,7 +47,6 @@ $vogelen = json_decode(file_get_contents('../../data/voogelen.json'), true);
 
         </div>
     </div>
-
 
 
 </body>
