@@ -10,9 +10,9 @@ function commonsImages($taxonId, $fromNozeman = false) {
     }
 
     $query = <<<EOD
-        SELECT DISTINCT ?file ?depicted ?taxonName ?image ?depictedLabel ?depictedLabelNL ?taxon WHERE {
+        SELECT DISTINCT ?file ?taxonName ?image ?depictedLabel ?depictedLabelNL ?taxon WHERE {
             ?file wdt:P180 wd:$taxonId.
-            ?file wdt:P180 ?depicted .
+            #?file wdt:P180 ?depicted .
             ?file schema:url ?image .
             ?file rdf:type schema:ImageObject . # don't produce sounds ;)
             $nozemanQuery
@@ -21,10 +21,10 @@ function commonsImages($taxonId, $fromNozeman = false) {
             SERVICE <https://query.wikidata.org/sparql> {
                 SERVICE wikibase:label {
                     bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
-                    ?depicted rdfs:label ?depictedLabel .
+                    wd:$taxonId rdfs:label ?depictedLabel .
                 }
-                ?depicted wdt:P225 ?taxonName .
-                ?depicted wdt:P105 ?taxon . # geen eieren, alleen vogels en planten
+                wd:$taxonId wdt:P225 ?taxonName .
+                wd:$taxonId wdt:P105 ?taxon . # geen eieren, alleen vogels en planten
             }
         }
         #ORDER BY ?image
@@ -56,7 +56,7 @@ function commonsImages($taxonId, $fromNozeman = false) {
     }
     
     #print("Results\n");
-    #print($response);
+    #print("<pre>$response</pre>");
     return json_decode( $response, true )['results']['bindings'];
 }
 
