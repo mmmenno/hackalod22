@@ -1,9 +1,15 @@
 <?php
 
-function commonsImages($taxonId) {
+function commonsImages($taxonId, $fromNozeman = false) {
     $endpoint = 'https://commons-query.wikimedia.org/sparql';
+    $nozemanQuery = '';
+    if ($fromNozeman === true) {
+        $nozemanQuery = '?file wdt:P6243 wd:Q19361289 . ';
+    }
+
     $query = <<<EOD
         SELECT DISTINCT ?file ?depicted ?taxonName ?image ?depictedLabel ?depictedLabelNL ?taxon WHERE {
+            $nozemanQuery
             ?file wdt:P180 wd:$taxonId.
             ?file wdt:P180 ?depicted .
             ?file schema:url ?image .
