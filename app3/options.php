@@ -19,11 +19,24 @@ $data = json_decode($json,true);
 
 //print_r($data);
 
+$taxons = array();
+foreach ($data['results']['bindings'] as $row) {
+  $taxons[$row['taxonLabel']['value']] = array(
+    "wd" => str_replace("http://www.wikidata.org/entity/","",$row['taxon']['value']),
+    "nr" => $row['aantal']['value']
+  );
+}
+
+ksort($taxons,SORT_NATURAL|SORT_FLAG_CASE);
+
 $options = "";
 
-foreach ($data['results']['bindings'] as $row) {
-	$options .= "<option value=\"" . str_replace("http://www.wikidata.org/entity/","",$row['taxon']['value']) ."\">";
-	$options .=  $row['taxonLabel']['value']  . " (" . $row['aantal']['value'] . ")</option>\n";
+foreach ($taxons as $k => $v) {
+  if(preg_match("/^(http|Q6)/",$k)){
+    continue;
+  }
+	$options .= "<option value=\"" . $v['wd'] ."\">";
+	$options .=  $k  . " (" . $v['nr'] . ")</option>\n";
 }
 
 
