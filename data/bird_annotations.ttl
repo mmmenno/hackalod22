@@ -6,7 +6,7 @@
 @prefix      ann_ui: <http://semanticweb.cs.vu.nl/annotate/ui/> .
 @prefix     dcterms: <http://purl.org/dc/terms/> .
 @prefix          dc: <http://purl.org/dc/elements/1.1/> .
-@prefix         rma: <http://purl.org/collections/nl/rma/> .
+@prefix         rma: <https://www.rijksmuseum.nl/collectie/> .
 @prefix       birds: <http://purl.org/collections/birds/> .
 @prefix   instances: <http://localhost/annotation/instances/> .
 @prefix      target: <http://localhost/.well-known/genid/oa/target/> .
@@ -3777,7 +3777,7 @@ instances:id_00b33035f0681c05990aa362a8701b191057fdc5
 		     cnt:chars "echt"
 		   ] ;
 	oa:hasTarget target:target_179065160bbe8fde64da3a282a501cb08d5beef1 ,
-		     <http://purl.org/collections/nl/rma/RP-P-1937-919(R)> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-1937-919(R)> .
 
 instances:id_00d4b30f48dce3ae4c9ef61cb371634022fdcb01
 	a oa:Annotation ;
@@ -3788,7 +3788,7 @@ instances:id_00d4b30f48dce3ae4c9ef61cb371634022fdcb01
 	oa:annotatedAt "2015-10-09T20:48:01+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-44.433> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-44.433> .
 
 instances:id_0136c3c6af5c161ca9dda4621267780e8064f2c1
 	a oa:Annotation ;
@@ -3802,7 +3802,7 @@ instances:id_0136c3c6af5c161ca9dda4621267780e8064f2c1
 		     cnt:chars "adult"
 		   ] ;
 	oa:hasTarget target:target_6ef45632e60019b1a34540c85167093a001e583e ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-31.563> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.563> .
 
 instances:id_013d9237fdd3d9ab1b1cdaf980f5d2167683e2dc
 	a oa:Annotation ;
@@ -3908,7 +3908,7 @@ instances:id_046d0a41ea3dd95febf75549ee0ec7b4d755d988
 	oa:annotatedAt "2015-10-09T20:50:05+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-passeridae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-31.563> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.563> .
 
 instances:id_04b5901ef528c4ec53e42c3c743694a47da210a7
 	a oa:Annotation ;
@@ -3930,7 +3930,7 @@ instances:id_04e4175ef50757d215476e4e7eed609c2d1d1df4
 	oa:annotatedAt "2015-10-09T20:45:15+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-65.846> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-65.846> .
 
 instances:id_050173f573fb7eb6b073fb99e0a07bb8996a3fb1
 	a oa:Annotation ;
@@ -3942,7 +3942,7 @@ instances:id_050173f573fb7eb6b073fb99e0a07bb8996a3fb1
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:family-anatidae ;
 	oa:hasTarget target:target_307f0cff52d27b42125003b84bd34e5f1b7222c3 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-200.857> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.857> .
 
 instances:id_055dd9d83a26e7c9ac40eabd64edba8b9662610a
 	a oa:Annotation ;
@@ -4049,7 +4049,7 @@ instances:id_07afd179c9fd3303dd362d82b36d1bd652a00764
 	oa:annotatedAt "2015-10-09T20:49:32+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-65.844> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-65.844> .
 
 instances:id_07c60c3a5b933a2d59870b31166ebb336f1d8113
 	a oa:Annotation ;
@@ -4178,7 +4178,7 @@ instances:id_0b52a5ee2b9b27fb1d6c557bedd946caccca85d5
 		     cnt:chars "De vermiljoen vliegenvanger"
 		   ] ;
 	oa:hasTarget target:target_29381ae3122c8f0a9e9de116a6fb9b44acf6f014 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.605> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.605> .
 
 instances:id_0b730210afb6f304c961821345c6d45b3483bbc3
 	a oa:Annotation ;
@@ -4398,7 +4398,7 @@ instances:id_121ad9ce2ff14d73a2626aee015f744679f20071
 	oa:annotatedAt "2015-10-09T20:51:17+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-11.619> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-11.619> .
 
 instances:id_1233de68a9d057ef564d41454800c1d520f45dfe
 	a oa:Annotation ;
@@ -4409,7 +4409,7 @@ instances:id_1233de68a9d057ef564d41454800c1d520f45dfe
 	oa:annotatedAt "2015-10-09T20:43:41+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-ardeidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-11.631> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-11.631> .
 
 instances:id_126c17b4d745805fa8d995ca463817f11652cfe2
 	a oa:Annotation ;
@@ -4521,7 +4521,7 @@ instances:id_14da5dc6e36706dd332433df552c0255638a1d3a
 	oa:annotatedAt "2015-10-09T20:46:36+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-grus_grus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-26.672> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-26.672> .
 
 instances:id_15615443a3cbca739bb90c52b510e8a81ac50f05
 	a oa:Annotation ;
@@ -4569,7 +4569,7 @@ instances:id_16d1c2c5afa3d10803e1900fd3d51c301e200486
 	oa:annotatedAt "2015-10-09T20:51:27+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:family-sturnidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-44.020> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-44.020> .
 
 instances:id_1731667d4952274ffbbbc065a5ac5b33355898cb
 	a oa:Annotation ;
@@ -4790,7 +4790,7 @@ instances:id_1c2ffd87b35f670634fcb2d880161566977b8aa0
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:species-uria_lomvia ;
 	oa:hasTarget target:target_45c78e29ae867c3fd4ad1c5ec09c1132d5715c22 ,
-		     <http://purl.org/collections/nl/rma/RP-T-1971-218-2(R)> .
+		     <https://www.rijksmuseum.nl/collectie/RP-T-1971-218-2(R)> .
 
 instances:id_1c63695b859ad3bccce9bc7649e827dffdddbbbf
 	a oa:Annotation ;
@@ -4823,7 +4823,7 @@ instances:id_1dda5b4beb3b23736992ab0d465e4a32552b9443
 	oa:annotatedBy ausr:debby ;
 	oa:hasBody birds:species-dendrocopos_major ;
 	oa:hasTarget target:target_6ef45632e60019b1a34540c85167093a001e583e ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-31.563> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.563> .
 
 instances:id_1e40763b63c5eb6b4cabe07a182fecda29945117
 	a oa:Annotation ;
@@ -4889,7 +4889,7 @@ instances:id_1f591f742b16492efe8f350f531a7568b28d37fd
 	oa:annotatedAt "2015-10-09T20:45:28+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-passeridae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-203.576> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-203.576> .
 
 instances:id_1fc8125f7da32cbf0926d1eea09c618062e5a059
 	a oa:Annotation ;
@@ -4901,7 +4901,7 @@ instances:id_1fc8125f7da32cbf0926d1eea09c618062e5a059
 	oa:annotatedBy ausr:BRItter ;
 	oa:hasBody birds:family-cacatuidae ;
 	oa:hasTarget target:target_c538c3029da6d33ca3594b655f195bf4fa7476de ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-201.354> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.354> .
 
 instances:id_1fe7ccfc5f422293451f18075088831bb7a028ef
 	a oa:Annotation ;
@@ -4994,7 +4994,7 @@ instances:id_21ad87a9bd96c077ddee0f93e0b96a4e098cc801
 	oa:annotatedAt "2015-10-09T20:44:01+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-athene_noctua ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.865> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.865> .
 
 instances:id_21c606672a51ddbca85908816466fd88b7160c56
 	a oa:Annotation ;
@@ -5108,7 +5108,7 @@ instances:id_253c59ca4f83cbc935f04fd1786e627031467ec2
 		     cnt:chars "De Uil"
 		   ] ;
 	oa:hasTarget target:target_469a9bdc026c4a141baf8c473bf42cbbf995ff69 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.605> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.605> .
 
 instances:id_255a39f92df5194e46ebd5189c0f91a9f964b1c1
 	a oa:Annotation ;
@@ -5212,7 +5212,7 @@ instances:id_27776f12ca4f70df1fb2ee6a32771992d6dab7a3
 		     cnt:chars "Parquit"
 		   ] ;
 	oa:hasTarget target:target_a121e633c86db5da85f34170244dcfd57c3313c7 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.585> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.585> .
 
 instances:id_2789a46d5940bab90c24a91e79fdca7760d5c934
 	a oa:Annotation ;
@@ -5389,7 +5389,7 @@ instances:id_2ad9b30c3ac65c812fa7866f32520c55b509862c
 	oa:annotatedAt "2015-10-09T20:48:51+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-grus_grus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-67.366> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-67.366> .
 
 instances:id_2add6280cd1d8fb403d47e0078f860816648c955
 	a oa:Annotation ;
@@ -5467,7 +5467,7 @@ instances:id_2cd085b7042225eb7b57f7a66a8e48f6a1b2fd5e
 	oa:annotatedAt "2015-10-09T20:45:55+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-strigidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-11.625> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-11.625> .
 
 instances:id_2d34a6356a14765787ebb3b1ff2dc9389d729ac7
 	a oa:Annotation ;
@@ -5594,7 +5594,7 @@ instances:id_303ac6e77138bc751132989f81f5566038643c97
 	oa:annotatedBy ausr:debby ;
 	oa:hasBody birds:species-dendrocopos_major ;
 	oa:hasTarget target:target_6ef45632e60019b1a34540c85167093a001e583e ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-31.563> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.563> .
 
 instances:id_30a7fc406768b0ab42ab45104b5e7e9715e23a05
 	a oa:Annotation ;
@@ -5616,7 +5616,7 @@ instances:id_30e367b0188acb53ed66849835a549dfe813ca53
 	oa:annotatedAt "2015-10-09T20:42:39+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-cuculus_canorus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.753> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.753> .
 
 instances:id_31e14b1e7c7339c1a4f8bcb106badfb752ad570b
 	a oa:Annotation ;
@@ -5627,7 +5627,7 @@ instances:id_31e14b1e7c7339c1a4f8bcb106badfb752ad570b
 	oa:annotatedAt "2015-10-09T20:42:40+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-passeridae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.067> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.067> .
 
 instances:id_327f59295d61585dc18d28693a49f85c1a61da5e
 	a oa:Annotation ;
@@ -5782,7 +5782,7 @@ instances:id_3540f7a3289bbcf9c64a227796329091e0b7b010
 		     cnt:chars "De Albatros"
 		   ] ;
 	oa:hasTarget target:target_2e6c4efbd72356a8e7b9e76ac3ea4c4b1c0c038e ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.610> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.610> .
 
 instances:id_35c65bf433ce8de248913e52ebea9c77d2e5e776
 	a oa:Annotation ;
@@ -5793,7 +5793,7 @@ instances:id_35c65bf433ce8de248913e52ebea9c77d2e5e776
 	oa:annotatedAt "2015-10-09T20:40:03+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-phasianus_colchicus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.033> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.033> .
 
 instances:id_35cce243371b8469484a21a21ac4cf06e93091ec
 	a oa:Annotation ;
@@ -5928,7 +5928,7 @@ instances:id_38e19951a546c3d7e37fe7ac675b3e06b492b91e
 	oa:annotatedAt "2015-10-09T20:40:02+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:subspecies-pyrrhula_pyrrhula_europoea ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.755> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.755> .
 
 instances:id_38ff0e3688de9ff010e12e642be2f5b5883c7c45
 	a oa:Annotation ;
@@ -5965,7 +5965,7 @@ instances:id_394df8c1385241d04830fad460b1215ad9580085
 	oa:annotatedAt "2015-10-09T20:42:03+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-65.845> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-65.845> .
 
 instances:id_39a9f59ef94a3d771715f4d4908849eafa31a6b6
 	a oa:Annotation ;
@@ -6192,7 +6192,7 @@ instances:id_3f2e0362c4f9574c39e281100fe39854f6e62f62
 	oa:annotatedAt "2015-10-09T20:42:02+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:species-tyto_alba ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-50.684> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-50.684> .
 
 instances:id_3f532fdb14488a30af961206eb4b1ee510ca11dc
 	a oa:Annotation ;
@@ -6215,7 +6215,7 @@ instances:id_3f77d4a890429b212d9891edc3b6a7efd13abb91
 	oa:annotatedAt "2015-10-09T20:43:09+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-206.858> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.858> .
 
 instances:id_3f7beda1f74536f67e34115bcbbafd1151e01b3c
 	a oa:Annotation ;
@@ -6249,7 +6249,7 @@ instances:id_40b2d56f6ae6c936c0979de4c2a399da6a1c4c31
 	oa:annotatedAt "2015-10-09T20:41:35+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-sylviidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-102.513> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-102.513> .
 
 instances:id_40ceccd1b92ab098de790847fee410d64c2925af
 	a oa:Annotation ;
@@ -6283,7 +6283,7 @@ instances:id_41492cdafbdb77eec7ab6c4569afee13e6cc70ff
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:species-uria_lomvia ;
 	oa:hasTarget target:target_45c78e29ae867c3fd4ad1c5ec09c1132d5715c22 ,
-		     <http://purl.org/collections/nl/rma/RP-T-1971-218-2(R)> .
+		     <https://www.rijksmuseum.nl/collectie/RP-T-1971-218-2(R)> .
 
 instances:id_41b258b22ec099d0eaf87032f634ffa38b930cb1
 	a oa:Annotation ;
@@ -6379,7 +6379,7 @@ instances:id_43b8c4e848d833adb68d75010f313c306ce47328
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:family-psittacidae ;
 	oa:hasTarget target:target_274f5689892aada3a1854bb91acebcbcaf1f864c ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.585> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.585> .
 
 instances:id_4420522ba1b1720f9d3abc6aa4878eb5d612bfaa
 	a oa:Annotation ;
@@ -6390,7 +6390,7 @@ instances:id_4420522ba1b1720f9d3abc6aa4878eb5d612bfaa
 	oa:annotatedAt "2015-10-09T20:50:13+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-grus_grus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-67.366> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-67.366> .
 
 instances:id_4437b7b388efac8ec72de32a3b93fc062b5f4e9f
 	a oa:Annotation ;
@@ -6412,7 +6412,7 @@ instances:id_4478cd9095c751028bcb069fbad90dcc11b27d50
 	oa:annotatedAt "2015-10-09T20:50:58+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-fringilla_coelebs ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.222> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.222> .
 
 instances:id_44a52154c0badefae8530c0a294af2ffc53fb1a9
 	a oa:Annotation ;
@@ -6788,7 +6788,7 @@ instances:id_4d059f0f3c995a2ad16930ce12a021bf3774d93d
 	oa:annotatedAt "2015-10-09T20:46:43+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-stercorariidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-77.633> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-77.633> .
 
 instances:id_4d1b60c52ceb89e4391a508fbbcb06a980489d74
 	a oa:Annotation ;
@@ -7006,7 +7006,7 @@ instances:id_526db2f7dacbedf799a472f93d11a7cd3c7be333
 	oa:annotatedBy ausr:BRItter ;
 	oa:hasBody birds:species-gyps_fulvus ;
 	oa:hasTarget target:target_b68f7c948138eecb4e61c5cea6cc63e494a6f57a ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-201.354> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.354> .
 
 instances:id_530e5cb3a2a81dd9608249d051cc1685d3658f62
 	a oa:Annotation ;
@@ -7039,7 +7039,7 @@ instances:id_54ec3ccdbbc011e4a1dbf60bdfcbfa71d4f13d3d
 	oa:annotatedBy ausr:debby ;
 	oa:hasBody birds:species-coloeus_monedula ;
 	oa:hasTarget target:target_b7f1d03216c0ad1462573f8b61acf29b805e4618 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-31.563> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.563> .
 
 instances:id_551e4f6963f80289e6c42b4f2f3ea970049176af
 	a oa:Annotation ;
@@ -7065,7 +7065,7 @@ instances:id_554bc7dac1f0e2e296771f58703286946c9b85a0
 		     cnt:chars "Papegaai"
 		   ] ;
 	oa:hasTarget target:target_af648a9e10adfa31d6d8774a443527086ded4ec0 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-204.717> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-204.717> .
 
 instances:id_556580d64e163478df569532c0c38b181f673e72
 	a oa:Annotation ;
@@ -7088,7 +7088,7 @@ instances:id_55a4697b9fd356afe54e17c34502fe3f5099a67c
 	oa:annotatedAt "2015-10-09T20:51:26+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:family-sturnidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-44.020> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-44.020> .
 
 instances:id_55afbe06d48918a2ddc266d65ab37458a4cc93a2
 	a oa:Annotation ;
@@ -7128,7 +7128,7 @@ instances:id_55e250d5a50aa474e922f50804a32f8806e1bda0
 		     cnt:chars "adult"
 		   ] ;
 	oa:hasTarget target:target_b7f1d03216c0ad1462573f8b61acf29b805e4618 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-31.563> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.563> .
 
 instances:id_562ac3e88def3e482de0a3f063a85779ab56d8c9
 	a oa:Annotation ;
@@ -7432,7 +7432,7 @@ instances:id_5ae98f95849c08cac278e8b0305db4117ef77e59
 	oa:annotatedAt "2015-10-09T20:46:17+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-struthio_camelus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-68.111> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-68.111> .
 
 instances:id_5b2851ef95da7e2df887f06c42770cee2b05ebb2
 	a oa:Annotation ;
@@ -7652,7 +7652,7 @@ instances:id_6158f9c659c1ec772715e7da57f2ded4f8d88977
 	oa:annotatedAt "2015-10-09T20:43:09+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-meleagris_gallopavo ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-205.025> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-205.025> .
 
 instances:id_615d2044941bbdb95d99fff1073cc033ccf45350
 	a oa:Annotation ;
@@ -7821,7 +7821,7 @@ instances:id_65ac6630ea498b645b2605cc0203c1caf0e015c5
 		     cnt:chars "Papegaai"
 		   ] ;
 	oa:hasTarget target:target_274f5689892aada3a1854bb91acebcbcaf1f864c ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.585> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.585> .
 
 instances:id_65dc690650031ea464e6db5b2ef6ee5e39566675
 	a oa:Annotation ;
@@ -7865,7 +7865,7 @@ instances:id_67f1751d6d78e1e28570f70c922591e41c346c87
 	oa:annotatedAt "2015-10-09T20:42:01+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-fringilla_coelebs ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-31.564> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.564> .
 
 instances:id_67f59136a4470846ea5a0eb9ee461913a1e63446
 	a oa:Annotation ;
@@ -7978,7 +7978,7 @@ instances:id_69b316a42c79e0262b9850049daa8721cab2cf82
 		     cnt:chars "De Swart en gele vliegenvanger"
 		   ] ;
 	oa:hasTarget target:target_2e1f3959ae59774ef54e0cdda117ba64f9060cb2 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.605> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.605> .
 
 instances:id_69cd211ec3a90335a81629d8cac93f2eb2086417
 	a oa:Annotation ;
@@ -8022,7 +8022,7 @@ instances:id_6a334a2ad1cedabc431bc6e1886fac97e8126377
 	oa:annotatedAt "2015-10-09T20:46:02+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-grus_grus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-26.672> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-26.672> .
 
 instances:id_6a8498c1df96dbe6753c4d55860438510b591387
 	a oa:Annotation ;
@@ -8091,7 +8091,7 @@ instances:id_6c28b9ef1e4924f204e2718180f3f8c4a4366fa1
 	oa:annotatedAt "2015-10-09T20:44:35+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-athene_noctua ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.865> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.865> .
 
 instances:id_6c461613c5891f48d9aab1d7e9d35dab1ee3ede7
 	a oa:Annotation ;
@@ -8169,7 +8169,7 @@ instances:id_6d1873ae34241dba82ddef781fcdaea2e31fb8dd
 	oa:annotatedAt "2015-10-09T20:47:22+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-grus_grus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-46.765> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-46.765> .
 
 instances:id_6d8ba65343703950e58a029253e0967432cc57ac
 	a oa:Annotation ;
@@ -8231,7 +8231,7 @@ instances:id_6f001a4e13c7fa6588704c3882197d127bbd5c22
 		     cnt:chars "echt"
 		   ] ;
 	oa:hasTarget target:target_6d8fe6f21716cbcf31362666a1968b9e7e283c95 ,
-		     <http://purl.org/collections/nl/rma/RP-P-1937-919(R)> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-1937-919(R)> .
 
 instances:id_6f58ef0647c5506eaa14897bce9eff158d85da0c
 	a oa:Annotation ;
@@ -8424,7 +8424,7 @@ instances:id_7676a08b5f3812e975a8901666b9ce48313d2631
 		     cnt:chars "adult"
 		   ] ;
 	oa:hasTarget target:target_b68f7c948138eecb4e61c5cea6cc63e494a6f57a ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-201.354> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.354> .
 
 instances:id_76872d929aa46a759c877b8d32cd462077cccdf4
 	a oa:Annotation ;
@@ -8460,7 +8460,7 @@ instances:id_76c8fa0488ac865817d9918f8c1018e560b75221
 		     cnt:chars "Corvus monedula"
 		   ] ;
 	oa:hasTarget target:target_b7f1d03216c0ad1462573f8b61acf29b805e4618 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-31.563> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.563> .
 
 instances:id_76ce2e278a659d84e115e8d6d700f1211225cd7f
 	a oa:Annotation ;
@@ -8509,7 +8509,7 @@ instances:id_785944e4807fce53fc36434cfae623fbe057e8f8
 		     cnt:chars "Arend"
 		   ] ;
 	oa:hasTarget target:target_b894a4412b2eb3b91e5e111f04eb48ba5ad38702 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-204.717> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-204.717> .
 
 instances:id_789c61a558aee0f2074bca9320c9b532bb9dd6be
 	a oa:Annotation ;
@@ -8626,7 +8626,7 @@ instances:id_7a46c4afd063aa2b70b9d1ebb6045670da5f4e3e
 	oa:annotatedAt "2015-10-09T20:45:24+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-65.846> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-65.846> .
 
 instances:id_7a65c4b30c5eafeaf58f518ce387d62de5678597
 	a oa:Annotation ;
@@ -8659,7 +8659,7 @@ instances:id_7b7b3f9e26c9028e824858fc33c4a0aebe89e7d1
 	oa:annotatedAt "2015-10-09T20:49:20+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-meleagris_gallopavo ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.037> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.037> .
 
 instances:id_7c04593c406b72a908aee32938fab507f45a34d8
 	a oa:Annotation ;
@@ -8819,7 +8819,7 @@ instances:id_80bd1d8c30de8c90adbd3d7e4db070bd40e9e882
 	oa:annotatedAt "2015-10-09T20:38:52+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-65.879> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-65.879> .
 
 instances:id_81031649ab1e2af667815fcf31d907d1aadfbe8c
 	a oa:Annotation ;
@@ -8909,7 +8909,7 @@ instances:id_82cf1538955a838d880bd06d8120e3c2735e260e
 	oa:annotatedBy ausr:BRItter ;
 	oa:hasBody birds:family-columbidae ;
 	oa:hasTarget target:target_94e7931970210142d135b92e46f332dc4ff43ce8 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-201.354> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.354> .
 
 instances:id_832c0c32027c5dfa5d981c6f9c56cee5fa0dd676
 	a oa:Annotation ;
@@ -9120,7 +9120,7 @@ instances:id_8714c1aec20ceae6f829def74b3e673d7cbde670
 	oa:annotatedAt "2015-10-09T20:50:26+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-52.504> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-52.504> .
 
 instances:id_874809e61b03ab4e00294721c3c4826d26a46ab8
 	a oa:Annotation ;
@@ -9157,7 +9157,7 @@ instances:id_87a6a465d0f0d5e39ea8e12e436d31f279003aeb
 	oa:annotatedAt "2015-10-09T20:50:53+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-fringilla_coelebs ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.222> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.222> .
 
 instances:id_87cbc85da6e3fdd327c5a4ca3fe3b21648321a8b
 	a oa:Annotation ;
@@ -9311,7 +9311,7 @@ instances:id_8bcab43b728978684aaea8f3344240f1ab899eb3
 	oa:annotatedAt "2015-10-09T20:49:31+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:family-ciconiidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-52.504> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-52.504> .
 
 instances:id_8c1321a05022e90bbd85600c5fd75575b7210c7b
 	a oa:Annotation ;
@@ -9396,7 +9396,7 @@ instances:id_8e620aa734e5a402cdcb087ea7d7d2b1a34288c8
 	oa:annotatedBy ausr:MaartenH ;
 	oa:hasBody birds:family-accipitridae ;
 	oa:hasTarget target:target_949cf0c19a161050babde31d894d44fc94e75913 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-84.272> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-84.272> .
 
 instances:id_8ea22037f142cf7fa37315c656c47c2c5c660efd
 	a oa:Annotation ;
@@ -9591,7 +9591,7 @@ instances:id_92a840bc592c476dff32037d53967481c4eaa04f
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:family-gruidae ;
 	oa:hasTarget target:target_8e22c9a0fafb0b9b92e090983dda00b853073456 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-200.857> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.857> .
 
 instances:id_92dadbdcc6ebdf77ecd484bc3aca77c27875d00a
 	a oa:Annotation ;
@@ -9651,7 +9651,7 @@ instances:id_94151af728777e8d33e63193564d7641668efbc2
 	oa:annotatedBy ausr:BRItter ;
 	oa:hasBody birds:family-psittacidae ;
 	oa:hasTarget target:target_83e421d7b0f0b50399a2d30914b0557935be6433 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-201.354> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.354> .
 
 instances:id_941b4a2d8b26476fd66fab416f2204ca37d8d79d
 	a oa:Annotation ;
@@ -9785,7 +9785,7 @@ instances:id_98d0d7356facc44184a6ec425d0376b5d93b65ac
 	oa:annotatedAt "2015-10-09T20:45:36+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-206.857> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.857> .
 
 instances:id_98d73ba0cd357c0a9dfc06e031b32e51317a9a50
 	a oa:Annotation ;
@@ -9807,7 +9807,7 @@ instances:id_98eb31297eae2113509e25c2adaaff0a068a20d9
 	oa:annotatedAt "2015-10-09T20:39:19+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-gallus_gallus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-11.621> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-11.621> .
 
 instances:id_98f17bc670125b1737524ccf2f6e1b2830b8a2b2
 	a oa:Annotation ;
@@ -9991,7 +9991,7 @@ instances:id_9da4b789bc7d0548e0fcd26a9ca0b7d00f7b1e31
 		     cnt:chars "echt"
 		   ] ;
 	oa:hasTarget target:target_44f99b04944ea0e7309d1280fefaf8b771e186a1 ,
-		     <http://purl.org/collections/nl/rma/RP-P-1937-919(R)> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-1937-919(R)> .
 
 instances:id_9eb2fe4fb9641426d17332b49b1c7cf5d7c107b2
 	a oa:Annotation ;
@@ -10028,7 +10028,7 @@ instances:id_a01a125b87fb54f4a84941015e4d3d872aab4490
 	oa:annotatedAt "2015-10-09T20:50:39+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-corvus_corax ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-103.460> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-103.460> .
 
 instances:id_a02d20878ab69cc1a9f48f8fb65ae96c1d7ddb7f
 	a oa:Annotation ;
@@ -10051,7 +10051,7 @@ instances:id_a03e0fb5f1e9a191a2e3fb5d1b120e08ad8828ad
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:family-strigidae ;
 	oa:hasTarget target:target_b86681094f7fb6ba7b1fb8ae280b0baa3ff3915f ,
-		     <http://purl.org/collections/nl/rma/RP-P-1937-919(R)> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-1937-919(R)> .
 
 instances:id_a07f565257eda5b59f058a9d02bc1739ce11f73c
 	a oa:Annotation ;
@@ -10099,7 +10099,7 @@ instances:id_a0a3d9db29bb0213f66d5528eabba04e10225249
 	oa:annotatedAt "2015-10-09T20:42:59+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.157> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.157> .
 
 instances:id_a1118b78cb74e979dd1a5305f29bdb72e903e5e3
 	a oa:Annotation ;
@@ -10169,7 +10169,7 @@ instances:id_a25df8f8e37c0167f9ac29689971836614cf0317
 	oa:annotatedAt "2015-10-09T20:40:03+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:subspecies-pyrrhula_pyrrhula_europoea ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.755> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.755> .
 
 instances:id_a3c298eca501e1e329141c740e604c5f84f98514
 	a oa:Annotation ;
@@ -10346,7 +10346,7 @@ instances:id_a76f0e91cd59b6a6e423b9459af8ec8940260c61
 	oa:annotatedAt "2015-10-09T20:48:09+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:species-gypaetus_barbatus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.058> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.058> .
 
 instances:id_a8396b1ace7e4fe36ed407d6783e9da05b15c1fa
 	a oa:Annotation ;
@@ -10647,7 +10647,7 @@ instances:id_ad9d9bd643aea38c0fafafc09ec1fbeeb23670e4
 		     cnt:chars "Het roodborstje"
 		   ] ;
 	oa:hasTarget target:target_79946a4b6a758712469745ce8ee022f8eb3c8c0d ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.605> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.605> .
 
 instances:id_ae2c1aacf45bb6016cce777508786478f5866146
 	a oa:Annotation ;
@@ -10704,7 +10704,7 @@ instances:id_af23132640e6ec62fa21dc7f0169e2540f598fd7
 	oa:annotatedAt "2015-10-09T20:50:47+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-65.844> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-65.844> .
 
 instances:id_af283b65f43e48f5dce0b72cb07c073e32773e45
 	a oa:Annotation ;
@@ -10807,7 +10807,7 @@ instances:id_b11b8a5384bdbc26780a3b626ee4e5347092ca52
 	oa:annotatedAt "2015-10-09T20:50:52+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-meleagris_gallopavo ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.037> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.037> .
 
 instances:id_b13d33278e44df631382acc21a2499d797ca1e62
 	a oa:Annotation ;
@@ -10855,7 +10855,7 @@ instances:id_b2eb7999e2c554aafbd86a5f98acf248724015aa
 	oa:annotatedAt "2015-10-09T20:50:55+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.366> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.366> .
 
 instances:id_b316bb9d96d3d31c0e61cab74d3b61927a8a564b
 	a oa:Annotation ;
@@ -11103,7 +11103,7 @@ instances:id_b90c2e28a281f963a29aa50644431f90393408b5
 	oa:annotatedAt "2015-10-09T20:49:23+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.366> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.366> .
 
 instances:id_b92d5ed63ad947aa6e0c2dc00486fdb73cc40ed7
 	a oa:Annotation ;
@@ -11488,7 +11488,7 @@ instances:id_c032dce1df2be25657ab39b9d266d5124f8320ff
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:family-accipitridae ;
 	oa:hasTarget target:target_b894a4412b2eb3b91e5e111f04eb48ba5ad38702 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-204.717> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-204.717> .
 
 instances:id_c06c242118776c36cb716b8f5ce2a8e3de599430
 	a oa:Annotation ;
@@ -11499,7 +11499,7 @@ instances:id_c06c242118776c36cb716b8f5ce2a8e3de599430
 	oa:annotatedAt "2015-10-09T20:41:05+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-fringilla_coelebs ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-31.564> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-31.564> .
 
 instances:id_c06fe8848afdc648e996741f2f48547ff0275768
 	a oa:Annotation ;
@@ -11551,7 +11551,7 @@ instances:id_c0e3fbbfa3eca39281ddb7a57aa9f1803ac3b34e
 	oa:annotatedAt "2015-10-09T20:49:31+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-52.504> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-52.504> .
 
 instances:id_c10166d4ae797eba7c2f45f9688d0d980e4d8a35
 	a oa:Annotation ;
@@ -11574,7 +11574,7 @@ instances:id_c1233514b4bd274b2a4d28fcd12868a0f3681a06
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:family-numididae ;
 	oa:hasTarget target:target_7bef6d96912addedde77fe56e375e3aba55cc41f ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-200.857> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.857> .
 
 instances:id_c124bdc0bc1eaedad3c27a09c16c50aa3390bba6
 	a oa:Annotation ;
@@ -11724,7 +11724,7 @@ instances:id_c625500ca348618f9dbbb59a63a87620cd1c2546
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:species-gallus_gallus ;
 	oa:hasTarget target:target_92738ba5b4979ad92dc2fa6418d220d1e8e105ec ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-204.717> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-204.717> .
 
 instances:id_c6adb90d0d55dd3955a500a611c2ff5846569d4f
 	a oa:Annotation ;
@@ -11735,7 +11735,7 @@ instances:id_c6adb90d0d55dd3955a500a611c2ff5846569d4f
 	oa:annotatedAt "2015-10-09T20:45:42+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-passeridae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-203.576> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-203.576> .
 
 instances:id_c6dd5b03064c114ef53e35bf4ad528d3e4a274c9
 	a oa:Annotation ;
@@ -11761,7 +11761,7 @@ instances:id_c798822bd55334fa9c5e7f0315aac9848cc7a2aa
 	oa:annotatedAt "2015-10-09T20:45:43+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-phasianus_colchicus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-203.829> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-203.829> .
 
 instances:id_c79c9efec2f985ad3bd04a83145e0cf030cc6e0b
 	a oa:Annotation ;
@@ -11879,7 +11879,7 @@ instances:id_ca077e9c9d73b86151149562462faae68b162b32
 		     cnt:chars "De Condor"
 		   ] ;
 	oa:hasTarget target:target_7d4418c185dbdccbe4a5c416b9dba5d0bd792bf8 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.605> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.605> .
 
 instances:id_cac2d1abec6f79dfe29feb99c8c47ff80c4d2c5f
 	a oa:Annotation ;
@@ -11940,7 +11940,7 @@ instances:id_cbbfa9b53b94e7235ede0cca93d3790c4e8bb126
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:family-psittacidae ;
 	oa:hasTarget target:target_af648a9e10adfa31d6d8774a443527086ded4ec0 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-204.717> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-204.717> .
 
 instances:id_cbd0f41bc942e31e30dd00f69e3c96be0ba68746
 	a oa:Annotation ;
@@ -11992,7 +11992,7 @@ instances:id_cc9a76d52ba9cbdda20ce09502a67b37a59288cc
 	oa:annotatedAt "2015-10-09T20:39:46+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-61.537> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-61.537> .
 
 instances:id_cc9d7723b1038e8de50b34ac99fe19dd9f71dcbb
 	a oa:Annotation ;
@@ -12060,7 +12060,7 @@ instances:id_ce370487044867f1b6de5c5f9fe80c1789e202de
 	oa:annotatedAt "2015-10-09T20:51:02+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-fringilla_coelebs ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-207.226> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-207.226> .
 
 instances:id_ce62408cad97ea5baa56fb47c3a94f609fe750cd
 	a oa:Annotation ;
@@ -12258,7 +12258,7 @@ instances:id_d1bff8376025f9c4374591ba43ee9fb35b47ec7d
 	oa:annotatedAt "2015-10-09T20:48:15+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:species-gypaetus_barbatus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.058> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.058> .
 
 instances:id_d1cbe1b62919d946e4413e82b987bba609b17acf
 	a oa:Annotation ;
@@ -12401,7 +12401,7 @@ instances:id_d40bd6f1d855770b696ad02fad9e78f21ae1e331
 	oa:annotatedAt "2015-10-09T20:45:22+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-phasianus_colchicus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-203.829> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-203.829> .
 
 instances:id_d47549122b8a050642d8dfb98d012ecd5bc57992
 	a oa:Annotation ;
@@ -12435,7 +12435,7 @@ instances:id_d580511bc96f3f2ebd34347384540ae421cf2f07
 	oa:annotatedBy ausr:BRitter ;
 	oa:hasBody birds:species-cygnus_cygnus ;
 	oa:hasTarget target:target_e6da2eda55c0b5076359a821376af9273823e94c ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-204.717> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-204.717> .
 
 instances:id_d59399f7d5ab1b56d7811ac6a8525110964e9d9d
 	a oa:Annotation ;
@@ -12537,7 +12537,7 @@ instances:id_d67d61db932c86124dd9ad0041a2cd9514db423a
 	oa:annotatedAt "2015-10-09T20:45:55+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:family-strigidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-11.625> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-11.625> .
 
 instances:id_d6f46b4c03a49fab0c02a380b7f8a4cf6046e320
 	a oa:Annotation ;
@@ -12772,7 +12772,7 @@ instances:id_dd521f8aa7d63a5bef9c683606a2a1b15133b027
 		     cnt:chars "Haan"
 		   ] ;
 	oa:hasTarget target:target_92738ba5b4979ad92dc2fa6418d220d1e8e105ec ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-204.717> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-204.717> .
 
 instances:id_dd66903e046a7eb852c962345229e2a83c2fa832
 	a oa:Annotation ;
@@ -12965,7 +12965,7 @@ instances:id_e26e9fa08c76aa338ba40d2165303b6fbf5e159e
 	oa:annotatedAt "2015-10-09T20:40:03+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:species-gypaetus_barbatus ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.057> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.057> .
 
 instances:id_e2b3e308e67fe2be2c0a34ea14f87f3ef87756ce
 	a oa:Annotation ;
@@ -12980,7 +12980,7 @@ instances:id_e2b3e308e67fe2be2c0a34ea14f87f3ef87756ce
 		     cnt:chars "De parakiet"
 		   ] ;
 	oa:hasTarget target:target_113a357eab1baa85393d7512bf1d529a25357d75 ,
-		     <http://purl.org/collections/nl/rma/RP-P-OB-206.610> .
+		     <https://www.rijksmuseum.nl/collectie/RP-P-OB-206.610> .
 
 instances:id_e2e4359e6113214f38e5d930dfbf0a4c378b5e7a
 	a oa:Annotation ;
@@ -13094,7 +13094,7 @@ instances:id_e5890d2d6ec322c2ec92eaef0af576b05850d65b
 	oa:annotatedAt "2015-10-09T20:42:47+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-passeridae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-201.067> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-201.067> .
 
 instances:id_e5a3a12d86b7efe97d4e3c6b73559053071a82be
 	a oa:Annotation ;
@@ -13246,7 +13246,7 @@ instances:id_e7e4d30d147f355142d30d335e043189e7a35fc9
 	oa:annotatedAt "2015-10-09T20:46:02+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-corvidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-44.818> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-44.818> .
 
 instances:id_e80b90ab1abb74c64c8f3607e28ef0f269928a5b
 	a oa:Annotation ;
@@ -13257,7 +13257,7 @@ instances:id_e80b90ab1abb74c64c8f3607e28ef0f269928a5b
 	oa:annotatedAt "2015-10-09T20:43:07+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-columbidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-105.712> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-105.712> .
 
 instances:id_e90aeeffaab08e334cf4d93b668fd6aca2403d63
 	a oa:Annotation ;
@@ -13375,7 +13375,7 @@ instances:id_ec4ba1127e513ca0ebe32f74aa549373cdc311ee
 	oa:annotatedBy ausr:Katka ;
 	oa:hasBody birds:species-tympanuchus_cupido ;
 	oa:hasTarget target:target_9fb221215318527cb2637b0a15d304484ab7a35d ,
-		     <http://purl.org/collections/nl/rma/RP-T-1960-82(V)> .
+		     <https://www.rijksmuseum.nl/collectie/RP-T-1960-82(V)> .
 
 instances:id_ec692ff6d24b12466c0c98d14a7f9f00f071ac04
 	a oa:Annotation ;
@@ -13547,7 +13547,7 @@ instances:id_f189fdd405330a44c065d7c755c3081ba25d5512
 	oa:annotatedAt "2015-10-09T20:40:09+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:subspecies-pyrrhula_pyrrhula_europoea ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.755> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.755> .
 
 instances:id_f23fb1873714a43f282202ba8330fe62c69989f8
 	a oa:Annotation ;
@@ -13672,7 +13672,7 @@ instances:id_f469570c080529bbbcf6aaf5f98bdd30e3a9cef7
 	oa:annotatedAt "2015-10-09T20:46:09+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:family-stercorariidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-77.633> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-77.633> .
 
 instances:id_f478cbe53e1c8c44670732ad86e40bcb503732f7
 	a oa:Annotation ;
@@ -13806,7 +13806,7 @@ instances:id_f7b93311f8ed44c7211a96d0d1fcbb175b118653
 	oa:annotatedAt "2015-10-09T20:50:26+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:family-ciconiidae ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-52.504> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-52.504> .
 
 instances:id_f80382c509049fabcfd948c90a4584be0b95d874
 	a oa:Annotation ;
@@ -13817,7 +13817,7 @@ instances:id_f80382c509049fabcfd948c90a4584be0b95d874
 	oa:annotatedAt "2015-10-09T20:42:53+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:DescriptionScanner ;
 	oa:hasBody birds:species-sturnus_vulgaris ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-200.222> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-200.222> .
 
 instances:id_f805cabb6ff0eac0fb29ba80b2f3a816847d502d
 	a oa:Annotation ;
@@ -13842,7 +13842,7 @@ instances:id_f8d456f3cb65d5a05b1f66ac739eff0dd75cd936
 	oa:annotatedAt "2015-10-09T20:50:59+02:00"^^xsd:dateTime ;
 	oa:annotatedBy ausr:TitleScanner ;
 	oa:hasBody birds:species-ciconia_ciconia ;
-	oa:hasTarget <http://purl.org/collections/nl/rma/RP-P-OB-202.079> .
+	oa:hasTarget <https://www.rijksmuseum.nl/collectie/RP-P-OB-202.079> .
 
 instances:id_f942699dd452b6b0f96b723dac01cda7c6a67e05
 	a oa:Annotation ;
