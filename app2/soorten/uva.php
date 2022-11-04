@@ -13,12 +13,13 @@ function uvaImages($taxonId) {
         PREFIX wdt: <http://www.wikidata.org/prop/direct/>
         PREFIX wd: <http://www.wikidata.org/entity/>
         
-        SELECT ?depictsURI ?botanic ?taxonName ?imageURL
+        SELECT ?depictsURI ?botanic ?taxonName ?imageURL ?gbif
         WHERE {
           SERVICE <https://query.wikidata.org/sparql> {
                 ?depictsURI wdt:P31 wd:Q16521 ;    # instance of taxon
                     wdt:P171* wd:$taxonId;  # parent taxon or subclasses of gall wasp
-                    wdt:P225 ?taxonName .    # taxon name
+                    wdt:P225 ?taxonName ;    # taxon name
+                    wdt:P846 ?gbif . # gbif id
           }
         
           ?botanic dc:subject ?subject ;
