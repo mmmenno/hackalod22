@@ -135,7 +135,8 @@ Selected: <?= $gebieds_naam ?> <?= $gebied ?>
     maptt.fitBounds(gebied.getBounds());
 
     function whenClicked(){
-      console.log('click')
+      //console.log('click')
+      window.location.assign("../app2/gebieden/index.php?gebied=<?= $gebied ?>")
     }
 
     gebied.on({
