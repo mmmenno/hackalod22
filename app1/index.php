@@ -7,23 +7,34 @@ $lat = 52;
 $lon = 5;
 $radius = 10;
 $qid = "Q13742779";
-$year = 1950;
+$year = 1900;
 
 $gebieden_data = "../data/natura2000-met-wikidata.csv";
+
+if(!isset($_GET['gebied'])){
+  $gebied = "Q2800398";
+}else{
+  $gebied = $_GET['gebied'];
+}
+
+$gebieds_json_url = "";
 
 $options = "";
 if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
     while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
-          $options .= "<option value=\"" . $row[0] ."\">" . $row[1] . "</option>\n";
+          if ($row[0] == $gebied){
+            $gebieds_json_url = "https://api.biodiversitydata.nl/v2/geo/getGeoJsonForLocality/" . $row[2];
+            $gebieds_naam = $row[1];
+            $options .= "<option selected=\"true\" value=\"" . $row[0] ."\">" . $row[1] . "</option>\n";
+          }
+          else{
+            $options .= "<option value=\"" . $row[0] ."\">" . $row[1] . "</option>\n";
+          }
     }
     fclose($handle);
 }
 
-if(!isset($_GET['gebied'])){
-  $gebied = "Q13742779";      // Kennemerduinen
-}else{
-  $gebied = $_GET['gebied'];
-}
+$gebied_json = file_get_contents($gebieds_json_url);
 
 ?>
 
@@ -49,16 +60,15 @@ if(!isset($_GET['gebied'])){
 
 </script>
 
+<p>
+Selected: <?= $gebieds_naam ?> <?= $gebied ?>
+</p>
+
 <form action="index.php" method="get">
-<select name="gebied">
+<select name="gebied" onchange="this.form.submit()">
     <?= $options ?>
 </select>
-<button type="submit">GO</button>
 </form>
-
-<p>
-Selected: <?= $gebied ?>
-</p>
 
 <!--<div id="map" style="height: 400px; margin-bottom: 24px; width: 98%;"></div>-->
 
@@ -96,7 +106,6 @@ Selected: <?= $gebied ?>
 
   function createTopoTijdReisMap(){
     center = [<?= $lat ?>, <?= $lon ?>];
-//    zoomlevel = <?= $zoomlevel ?>;
 
     var RD = new L.Proj.CRS(
         'EPSG:28992',
@@ -123,109 +132,50 @@ Selected: <?= $gebied ?>
         position: 'bottomright'
     }).addTo(maptt);
 
-    //L.control.layers([topotijdreislayer, topotijdreislayer2019]).addTo(maptt);
     var layerControl = L.control.layers().addTo(maptt);
     layerControl.addBaseLayer(topotijdreislayer2019, "Topotijdreis NU")
-    layerControl.addBaseLayer(topotijdreislayer, "Topotijdreis TOEN")
+    layerControl.addOverlay(topotijdreislayer, "Topotijdreis TOEN")
 
     //map view still gets set with Latitude/Longitude,
     //BUT the zoomlevel is now different (it uses the resolutions defined in our projection tileset above)
     maptt.setView(center, 11);
     // OR use RD coordinates (28992), and reproject it to LatLon (4326)
     //maptt.setView(RD.projection.unproject(center), 10);
-  }
 
-  function refreshMap(){
-    $.ajax({
-      type: 'GET',
-      url: 'geojson.php',
-      data: { lat: <?= $lat ?>, lon: <?= $lon ?>, radius: <?= $radius ?>, qid: "<?= $qid ?>" },
-      dataType: 'json',
-      success: function(jsonData) {
-        if (typeof sightings !== 'undefined') {
-          map.removeLayer(sightings);
+    var gebied = L.geoJson(<?= $gebied_json ?>, 
+      {
+        style: { 
+          color: 'red',
+          fillColor: 'white',
+          opacity: 1,
+          fillOpacity: 1
         }
-
-        sightings = L.geoJson(null, {
-          pointToLayer: function (feature, latlng) {                    
-              return new L.CircleMarker(latlng, {
-                  color: "#FC2211",
-                  radius:8,
-                  weight: 2,
-                  opacity: 0.8,
-                  fillOpacity: 0.3
-              });
-          },
-          style: function(feature) {
-            return {
-                color: getColor(feature.properties),
-                clickable: true
-            };
-          },
-          onEachFeature: function(feature, layer) {
-            showImages(feature);
-            layer.on({
-                click: whenClicked
-              });
-            }
-        }).addTo(map);
-
-        sightings.addData(jsonData).bringToFront();
-
-        if(sightings.getLayers().length == 0){
-          $('#fotobeschrijving').css("margin-bottom","0");
-        }
-      
-        //map.fitBounds(sightings.getBounds());
-      },
-      error: function() {
-          console.log('Error loading data');
       }
+    ).addTo(maptt);
+    maptt.fitBounds(gebied.getBounds());
 
-    });
-
-    
-  }
-
-  function getColor(props) {
-
-    if (typeof props['bend'] == 'undefined' || props['bend'] == null) {
-      return '#950305';
+    function whenClicked(){
+      console.log('click')
     }
-    return '#738AB7';
-  }
 
-  function whenClicked() {
+    gebied.on({
+        click: whenClicked
+      });
 
-    console.log('clicked');
-  }
-
-  function showImages(feature){
-    //console.log(feature);
-    var props = feature['properties'];
-    var src = props['foto'];
-    var photoid = props['obsid'];
-    //console.log(src);
-    var photo = $('<img>',{id: photoid, src: src});
-    photo.click(function(){
-      $('#foto').html('');
-      var src = $(this).attr('src');
-      src = src.replace('square','medium');
-      var bigphoto = $('<img>',{src: src});
-      $('#foto').append(bigphoto);
-
-      var phototxt = '';
-      if(props['taxonwp']!=null){
-        phototxt = '<a href="' + props['taxonwp'] + '">' + props['taxonname'] + '</a> - ';
+    document.body.onkeydown = function(e) {
+      if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+        console.log('down')
+        maptt.removeLayer(topotijdreislayer)
       }
-      phototxt += props['fotoattr'];
-      console.log(phototxt)
-      $('#fotobeschrijving').html(phototxt);
-    });
-    $('#fotos').append(photo);
+    }
+    document.body.onkeyup = function(e) {
+      if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+        console.log('up')
+        maptt.addLayer(topotijdreislayer)
+      }
+    }
+
   }
-
-
 
 </script>
 

@@ -4,41 +4,13 @@ include("functions.php");
 
 include("options.php");
 
-
-$sparql = "
-SELECT ?item ?itemLabel ?taxon ?taxonLabel ?afb ?dob ?dod ?wpen ?wpnl WHERE {
-  VALUES ?taxon { wd:" . $_GET['taxonid'] . " }
-  ?item wdt:P10241 ?taxon .
-  optional{
-    ?item wdt:P18 ?afb .
-  }
-  optional{
-    ?item wdt:P569 ?dob .
-  }
-  optional{
-    ?item wdt:P570 ?dod .
-  }
-  optional{
-    ?wpen schema:about ?item .
-    ?wpen schema:isPartOf <https://en.wikipedia.org/> .
-  }
-  optional{
-    ?wpnl schema:about ?item .
-    ?wpnl schema:isPartOf <https://nl.wikipedia.org/> .
-  }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
-}";
-
-//echo $sparql;
-$endpoint = 'https://query.wikidata.org/sparql';
-
-$json = getSparqlResults($endpoint,$sparql);
-$data = json_decode($json,true);
+include("individuals_query.php");
 
 //print_r($data);
 
 $imgs = array();
-foreach ($data['results']['bindings'] as $row) {
+$data = queryIndividuals();
+foreach ($data as $row) {
 	if(isset($row['afb']['value'])){
 		$imgs[] = array(
 			"img" => $row['afb']['value'] . "?width=100",
@@ -47,7 +19,6 @@ foreach ($data['results']['bindings'] as $row) {
 		);
 	}
 }
-
 
 ?>
 <html>
@@ -72,12 +43,12 @@ foreach ($data['results']['bindings'] as $row) {
 
 <h1>"We are all individuals"</h1>
 
-<h2>van het taxon <?= $data['results']['bindings'][0]['taxonLabel']['value'] ?></h2>
+<h2>van het taxon <?= $data[0]['taxonLabel']['value'] ?></h2>
 
 
 <br />
 
-<?php foreach ($data['results']['bindings'] as $row) { ?>
+<?php foreach ($data as $row) { ?>
 	<div class="individual">
 		<?php if(isset($row['afb']['value'])){ ?>
 				<div class="circle" style="background-image: url(<?= $row['afb']['value'] ?>?width=150);"></div>
