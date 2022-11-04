@@ -60,11 +60,18 @@ $gebied_json = file_get_contents($gebieds_json_url);
 
 </script>
 
-<p>
-Selected: <?= $gebieds_naam ?> <?= $gebied ?>
-</p>
+<style>
+.leaflet-control-layers {
+  display:none;
+}
 
-<form action="index.php" method="get">
+</style>
+
+<!--<p>
+Selected: <?= $gebieds_naam ?> <?= $gebied ?>
+</p>-->
+
+<form action="index.php" method="get" style="position: absolute; z-index: 10000;">
 <select name="gebied" onchange="this.form.submit()">
     <?= $options ?>
 </select>
@@ -72,37 +79,12 @@ Selected: <?= $gebieds_naam ?> <?= $gebied ?>
 
 <!--<div id="map" style="height: 400px; margin-bottom: 24px; width: 98%;"></div>-->
 
-<div id="maptt" style="height: 800px; margin-bottom: 24px; width: 98%;"></div>
+<div id="maptt" style="height: 100%; margin-bottom: 24px; width: 100%; position:fixed;"></div>
 
 <script>
   $(document).ready(function() {
-//    createMap();
     createTopoTijdReisMap();
-//    refreshMap();
   });
-
-  function createMap(){
-    center = [<?= $lat ?>, <?= $lon ?>];
-    zoomlevel = <?= $zoomlevel ?>;
-
-    map = L.map('map', {
-          center: center,
-          zoom: zoomlevel,
-          minZoom: 1,
-          maxZoom: 20,
-          scrollWheelZoom: true,
-          zoomControl: false
-      });
-
-    L.control.zoom({
-        position: 'bottomright'
-    }).addTo(map);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-  }
 
   function createTopoTijdReisMap(){
     center = [<?= $lat ?>, <?= $lon ?>];
@@ -164,13 +146,13 @@ Selected: <?= $gebieds_naam ?> <?= $gebied ?>
 
     document.body.onkeydown = function(e) {
       if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
-        console.log('down')
+        //console.log('down')
         maptt.removeLayer(topotijdreislayer)
       }
     }
     document.body.onkeyup = function(e) {
       if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
-        console.log('up')
+        //console.log('up')
         maptt.addLayer(topotijdreislayer)
       }
     }
