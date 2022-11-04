@@ -1,3 +1,10 @@
+<?php
+
+include("app3/functions.php");
+
+include("app3/options.php");
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,6 +58,8 @@
 			<img src="tegennatuur.jpg" />
 			<p>Historische cartografie laat veranderingen in het landschap zien. Hoe zit dat met de omgeving van Natura2000 gebieden?</p>
 
+			<h3>Gebruikte datasets</h3>
+			
 			<ul>
 				<li>Topotijdreis kaarten</li>
 				<li>Polygonen van Naturalis API</li>
@@ -64,6 +73,8 @@
 			<img src="florafauna.jpg" />
 			<p>Buiten de gemeente Utrecht zijn 9.782 vermeldingen gevonden van 1.303 verschillende straten.</p>
 
+			<h3>Gebruikte datasets</h3>
+			
 			<ul>
 				<li>Botanische prenten UvA UB</li>
 				<li>Nederlandsche vogelen van Nozeman en Sepp (via Commons)</li>
@@ -77,7 +88,29 @@
 
 			<img src="individuals.jpg" />
 
-			<p></p>
+			<p>Erfgoedinstellingen zijn doorgaans nogal antropocentrisch beschreven. Wordt het geen tijd de cartesiaanse scheiding tussen mens en natuur af te breken?</p>
+
+			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
+			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> | 
+			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> | 
+			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a>
+
+			<form action="app3/taxon.php" method="get">
+
+			<select name="taxonid" onchange="this.form.submit()">
+				<?= $options ?>
+			</select>
+
+			</form>
+
+			<h3>Gebruikte datasets</h3>
+
+			<ul>
+				<li>Individuele dieren van Wikidata</li>
+				<li>Afbeeldingen van Commons</li>
+				<li>Quotes uit Delpher</li>
+			</ul>
+
 		</div>
 	</div>
 
