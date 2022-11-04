@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>Collectie flora en fauna</h1>
-<h2>Soorten
+<h2>Soorten</h2>
+<a href="soort.php?taxonId=Q3699044">Wolharige mammoet</a>
 </body>
 </html>
