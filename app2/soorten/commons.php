@@ -58,6 +58,5 @@ function commonsImages($taxonId, $fromNozeman = false) {
     return json_decode( $response, true )['results']['bindings'];
 }
 
-//commonsImages("Q133128");
 
 ?>
