@@ -44,10 +44,9 @@ $vogelen = json_decode(file_get_contents('../../data/voogelen.json'), true);
             <h2><a href="https://www.wikidata.org/wiki/Q19361289">UVA UB collectie</a></h2>
         </div>
         <div class="col-md-4">
-
+            <h2><a href="https://www.wikidata.org/wiki/Q19361289">Rijksmuseum vogels</a></h2>
         </div>
     </div>
-
 
 </body>
 </html>
