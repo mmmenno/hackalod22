@@ -4,8 +4,7 @@ function commonsImages($taxonId) {
     $endpoint = 'https://commons-query.wikimedia.org/sparql';
     $query = <<<EOD
         SELECT DISTINCT ?file ?depicted ?taxonName ?image ?depictedLabel ?depictedLabelNL ?taxon WHERE {
-            #  ?file wdt:P6243 wd:Q19361289 . # Heron
-            ?file wdt:P180 wd:Q133128 .
+            ?file wdt:P180 wd:$taxonId.
             ?file wdt:P180 ?depicted .
             ?file schema:url ?image .
             #  ?depicted wdt:P105 wd:Q7432 .
