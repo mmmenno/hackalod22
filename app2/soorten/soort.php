@@ -8,6 +8,8 @@ include("uva.php");
 include("commons.php");
 include("dijkshoorn.php");
 
+include("../../app3/individuals_query.php");
+
 $taxonId = $_GET["taxonId"];
 print("<!-- results from Nozeman -->\n");
 foreach (commonsImages($taxonId, true) as $row) {
@@ -33,6 +35,9 @@ foreach (commonsImages($taxonId) as $row) {
     $full_image_url = $row['image']['value'];
     print("<!-- $file_entity_url -->");
     print("<img src='$full_image_url?width=300' height='300'/>");
+}
+if (!empty(queryIndividuals($taxonId))) {
+    print("<a href='../../app3/taxon.php?taxonid=$taxonId'>We Are All Individuals!!</a>");
 }
 ?>
 </body>
