@@ -2,6 +2,8 @@
 
 include("functions.php");
 
+include("options.php");
+
 
 $sparql = "
 SELECT ?item ?itemLabel ?taxon ?taxonLabel ?afb ?dob ?dod ?wpen ?wpnl WHERE {
@@ -51,56 +53,23 @@ foreach ($data['results']['bindings'] as $row) {
 <html>
 <head>
 
-	<style type="text/css">
-		body{
-			text-align: center;
-			font-family: Arial, Helvetica, sans-serif;
-		}
-		h1{
-			margin-top: 60px;
-		}
-		a{
-			color: #dc73d6;
-			text-decoration: none;
-			font-family: "Arial Black", Helvetica, sans-serif;
-		}
-		.individual{
-			position: relative;
-			display: inline-block;
-			margin: 20px 30px 0 30px;
-			text-align: center;
-			vertical-align: middle;
-			width: 150px;
-			height: 150px;
-		}
-		.circle{
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color:#ffc6ff;
-			border-radius: 50%;
-		  background-position: center; /* Center the image */
-		  background-repeat: no-repeat; /* Do not repeat the image */
-		  background-size: cover; /* Resize the background image to cover the entire container */
-		}
-		.content{
-			position: absolute;
-			width: 150px;
-			overflow: visible;
-			margin-top: 40px;
-			margin-left: -10px;
-			background-color:#fff;
-			font-size: 14px;
-			border: 5px solid #dc73d6;
-			padding: 5px;
-			color: #000;
-			
-		}
-	</style>
+<link rel="stylesheet" href="styles.css" />
 
 
 </head>
-<body>
+<body id="taxon">
+
+<form action="taxon.php" method="get">
+
+<select name="taxonid">
+	<?= $options ?>
+</select>
+
+<button type="submit">GO</button>
+
+</form>
+
+
 <h1>"We are all individuals"</h1>
 
 <h2>van het taxon <?= $data['results']['bindings'][0]['taxonLabel']['value'] ?></h2>

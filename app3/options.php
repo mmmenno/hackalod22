@@ -1,9 +1,5 @@
 <?php
 
-include("functions.php");
-
-
-// STAP 3: aan wikidata vragen wat de wikidata ids zijn bij deze gbif ids:
 
 $sparql = "
 SELECT ?taxon ?taxonLabel (count(?item) as ?aantal) WHERE {
@@ -30,15 +26,6 @@ foreach ($data['results']['bindings'] as $row) {
 	$options .=  $row['taxonLabel']['value']  . " (" . $row['aantal']['value'] . ")</option>\n";
 }
 
+
+
 ?>
-
-
-<form action="taxon.php" method="get">
-
-<select name="taxonid">
-	<?= $options ?>
-</select>
-
-<button type="submit">GO</button>
-
-</form>
