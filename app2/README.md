@@ -2,6 +2,19 @@
 
 Voorbeeldje van mogelijkheden die je ten deel vallen als je collectie-items verbindt met Wikidata identifiers van taxons.
 
+## Voorlopig plan
+### Vogels en bomen
+
+* lijst van natuurgebieden
+* lijst van soorten /vogels/bomen
+
+Natuurgebied ingang, kies gebied
+* kaartje van gebied, met topotijdreis achtergrond
+* verschillende tijdsblokken of jaren querien bij gbif
+* waarnemeningen van vogels en locaties van bomen in dit gebied
+* klik op vogel/boom: details van vogel, boom met complete hierarchie en plaatjes uit verschillende bronnen (langzaam uitbreiden!)
+* en dan hopelijk via soort naar notable individu
+  (denk Domino mus)
 
 
 ## In: Qid natuurgebied
