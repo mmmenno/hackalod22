@@ -1,6 +1,5 @@
 <?php
 
-
 $sparql = "
 SELECT ?taxon ?taxonLabel (count(?item) as ?aantal) WHERE {
   ?item wdt:P10241 ?taxon .
