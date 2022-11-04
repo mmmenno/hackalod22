@@ -12,6 +12,6 @@ foreach (uvaImages($taxonId) as $row) {
 }
 foreach (commonsImages($taxonId) as $row) {
     $full_url = $row['image']['value'];
-    print("<img src='$full_url' height='300'/>");
+    print("<img src='$full_url?width=300' height='300'/>");
 }
 ?>
