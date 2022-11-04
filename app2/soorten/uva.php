@@ -1,7 +1,5 @@
 <?php
 
-include("../../app3/functions.php");
-
 function uvaImages($taxonId) {
     $sparql = "
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
