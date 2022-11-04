@@ -1,7 +1,5 @@
 <?php
 
-include("functions.php");
-
 $zoomlevel = 10;
 $lat = 52;
 $lon = 5;

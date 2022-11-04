@@ -30,7 +30,16 @@ function commonsImages($taxonId, $fromNozeman = false) {
         #ORDER BY ?image
         LIMIT 10
     EOD;
-    
+
+    $url = $endpoint . '?query=' . urlencode($query) . "&format=json";
+    $urlhash = hash("md5", $url);
+    $datafile = __DIR__ . "/../../app3/sparqldata/" . $urlhash . ".json";
+
+    // get cached data if exists
+    if (file_exists($datafile)) {
+        return json_decode(file_get_contents($datafile));
+    }
+
     $ch = curl_init();
     curl_setopt_array( $ch, [
         CURLOPT_URL => $endpoint,
@@ -56,8 +65,9 @@ function commonsImages($taxonId, $fromNozeman = false) {
     }
     
     #print("Results\n");
-    #print("<pre>$response</pre>");
-    return json_decode( $response, true )['results']['bindings'];
+    #print($response);
+    file_put_contents($datafile, $response);
+    return json_decode($response, true)['results']['bindings'];
 }
 
 
