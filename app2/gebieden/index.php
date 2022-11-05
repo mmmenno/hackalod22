@@ -4,7 +4,7 @@ include("../../app3/functions.php");
 
 # Alle natuurgebieden, kies gebied, etc
 if(!isset($_GET['gebied'])){
-    $gebied = "Q2800398";
+    $gebiedid = "Q2800398";
 }else{
     $gebieden_data = "../../data/natura2000-met-wikidata.csv";
     if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
@@ -126,18 +126,129 @@ foreach ($occurrences as $ockey => $ocvalue) {
     }
 }
 
-print_r($occurrences);
-die;
+//print_r($occurrences);
+//die;
 
+$occurrences_json = json_encode($occurrences);
+//echo $occurrences_json;
+//die;
+
+$gebieds_json_url = "";
+$gebieden_data = "../../data/natura2000-met-wikidata.csv";
+$options = "";
+if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
+    while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+          if ($row[0] == $gebiedid){
+            $gebieds_json_url = "https://api.biodiversitydata.nl/v2/geo/getGeoJsonForLocality/" . $row[2];
+            $gebieds_naam = $row[1];
+            $options .= "<option selected=\"true\" value=\"" . $row[0] ."\">" . $row[1] . "</option>\n";
+          }
+          else{
+            $options .= "<option value=\"" . $row[0] ."\">" . $row[1] . "</option>\n";
+          }
+    }
+    fclose($handle);
+}
+
+$gebied_json = file_get_contents($gebieds_json_url);
 
 ?>
 <html>
 <head>
     <title>HetWildeNL - Collectie flora en fauna</title>
     <link href="/style.css" rel="stylesheet">
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw==" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==" crossorigin=""></script>
+
+    <!-- Esri Leaflet -->
+    <script src="https://unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"></script>
+
+    <!-- Proj4 and Proj4Leaflet -->
+    <script src="https://unpkg.com/proj4@2.5.0/dist/proj4-src.js"></script>
+    <script src="https://unpkg.com/proj4leaflet@1.0.1"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+  </script>
+
 </head>
 <body>
 <h1>Collectie flora en fauna</h1>
 <h2>Natuurgebied <?= $gebied ?></h2>
+
+<div id="map" style="height: 100%; margin-bottom: 24px; width: 100%; position:fixed;"></div>
+<script>
+    let map = L.map("map", {center: [31.262218, 34.801472], zoom: 17});
+    L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", 
+        {attribution: '&copy; <a href="http://' + 
+        'www.openstreetmap.org/copyright">OpenStreetMap</a>'}
+    ).addTo(map);
+
+    var gebied = L.geoJson(<?= $gebied_json ?>, 
+      {
+        style: { 
+          color: 'red',
+          fillColor: 'white',
+          opacity: 1,
+          fillOpacity: 0.3
+        }
+      }
+    ).addTo(map);
+    map.fitBounds(gebied.getBounds());
+
+    customCircleMarker = L.CircleMarker.extend({
+      options: { 
+          kaas: 'Custom data!',
+          anotherCustomProperty: 'More data!'
+      }
+    });
+
+    var group = L.featureGroup().addTo(map);
+    var occurrences = JSON.parse('<?= $occurrences_json ?>');
+    occurrences.forEach(function (item, index) {
+      console.log(item, index);
+      new customCircleMarker(
+        [item['lat'], item['lon']], 
+        { radius: 15, 
+          color: "black", 
+          fillColor: "red",
+          wikidata: item["wikidata"],
+          speciesKey: item['speciesKey'],
+          label: item['label']
+        }
+      ).addTo(group);
+    });
+    group.on("click", function (e) {
+      var c = e.layer; // e.target is the group itself.
+      c.bindPopup(
+        //'<img src=plaatje?taxonid="'+c.options.wikidata+'" height=150/>'+
+        '<a href="../soorten/soort.php?taxonId='+c.options.wikidata+'">'+c.options.label+'</a>').openPopup();
+    });
+
+//    let popup = L.popup();
+//    map.addEventListener("click", 
+//        function(e) {
+//            popup
+//                .setLatLng(e.latlng)
+//                .setContent(
+//                    "You clicked the map at -<br>" + 
+//                    "<b>lon:</b> " + e.latlng.lng + "<br>" + 
+//                    "<b>lat:</b> " + e.latlng.lat
+//                )
+//                .openOn(map);
+//    });
+
+</script>
 </body>
 </html>
