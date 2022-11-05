@@ -127,6 +127,7 @@ foreach ($vogelen as $vogel){
 			
 			<ul>
 				<li>Botanische prenten UvA UB</li>
+				<li>Dijkshoorn</li>
 				<li>Nederlandsche vogelen van Nozeman en Sepp (via Commons)</li>
 				<li>Waarnemingen via GBIF API</li>
 			</ul>
