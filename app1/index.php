@@ -125,7 +125,8 @@ Selected: <?= $gebieds_naam ?> <?= $gebied ?>
     var gebied = L.geoJson(<?= $gebied_json ?>, 
       {
         style: { 
-          color: 'red',
+          color: '#ed62f3',
+          weight: 5,
           fillColor: 'white',
           opacity: 1,
           fillOpacity: 1
