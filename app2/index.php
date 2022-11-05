@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Collectie flora en fauna</h1>
-<h2><a href="/gebieden/">Natuurgebieden</a></h2>
-<h2><a href="/soorten/">Soorten</a></h2>
+<h2><a href="gebieden/">Natuurgebieden</a></h2>
+<h2><a href="soorten/">Soorten</a></h2>
 </body>
 </html>

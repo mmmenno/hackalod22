@@ -229,7 +229,7 @@ $gebied_json = file_get_contents($gebieds_json_url);
         }
       ).addTo(group);
     });
-    group.on("click", function (e) {
+    group.on("mouseover", function (e) {
       var c = e.layer; // e.target is the group itself.
       c.bindPopup(
         //'<img src=plaatje?taxonid="'+c.options.wikidata+'" height=150/>'+
