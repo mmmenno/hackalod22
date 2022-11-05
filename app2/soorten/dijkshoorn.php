@@ -29,6 +29,7 @@ function dijkshoornImages($taxonId) {
             return array(
                 "image" => $row['image']['value'],
                 "uri" => $row['image']['value'],
+                'from' => 'dijkshoorn'
             );
         },
         $filtered
