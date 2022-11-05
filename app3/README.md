@@ -41,3 +41,8 @@ select distinct ?item ?itemLabel ?taxon ?taxonLabel ?image with {
         schema:url ?image.
 } limit 5000
 ```
+
+## Individu in werk/collectie
+
+P1441
+P195
