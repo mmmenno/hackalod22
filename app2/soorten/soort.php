@@ -1,4 +1,7 @@
 <html>
+<head>
+<link rel="stylesheet" href="styles.css" />
+</head>
 <body>
 <?php
 
@@ -19,9 +22,37 @@ $images = array_merge(
     commonsImages($taxonId)
 );
 
-foreach ($images as $row) {
-    print("<img src='${row['image']}' height='300'/>");
-}
+#foreach ($images as $row) {
+#    print("<img src='${row['image']}' height='300'/>");
+#}
+$positions = array(
+	"left: 5%; top: 70%",
+	"left: 25%; top: 8%",
+	"left: 45%; top: 40%",
+	"left: 70%; top: 65%",
+	"left: 53%; top: 10%",
+	"left: 85%; top: 00%",
+	"left: 05%; top: 00%",
+	"left: 30%; top: 70%",
+	"left: 85%; top: 60%",
+	"left: 55%; top: 45%"
+);
+$i = 0;
+foreach ($images as $img) { 
+
+	$pos = $positions[$i];
+	$i++;
+
+	if($i>8){
+		break;
+	}
+
+    ?>
+	<div class="imgcircleholder" style="<?= $pos ?>">
+		<div class="circle" style="background-image: url(<?= $img['image'] ?>?width=500);"></div>
+	</div>
+<?php }
+
 if (!empty(queryIndividuals($taxonId))) {
     print("<a href='../../app3/taxon.php?taxonid=$taxonId'>We Are All Individuals!!</a>");
 }
