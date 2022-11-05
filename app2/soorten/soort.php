@@ -55,7 +55,7 @@ foreach ($images as $img) {
 <?php }
 
 if (!empty(queryIndividuals($taxonId))) {
-    print("<a href='../../app3/taxon.php?taxonid=$taxonId'>We Are All Individuals!!</a>");
+    print("<a href='../../app3/taxon.php?taxonid=$taxonId'><div class='imgcircleholder' style='left: -0%; top: 23%'><div class='circle' style='background-image: url(./individuals.png)'></div></div></a>");
 }
 ?>
 </body>
