@@ -16,13 +16,21 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 // nozeman
 $vogelen = json_decode(file_get_contents('data/voogelen.json'), true);
-$vogeloptions = "";
+$taxonoptions = array();
 foreach ($vogelen as $vogel){
 	$wikiID = trim($vogel['depicted'], 'http://www.wikidata.org/entity/');
 	$label = $vogel['depictedLabelNL'];
-	$vogeloptions .= "<option value=\"" . $wikiID ."\">" . $label . "</option>\n";
+	$taxonoptions[$wikiID] = $label;
 
 }
+
+
+$taxoptions = "";
+foreach ($taxonoptions as $k => $v){
+	$taxoptions .= "<option value=\"" . $k ."\">" . $v . "</option>\n";
+
+}
+
 
 ?>
 <html>
@@ -105,6 +113,23 @@ foreach ($vogelen as $vogel){
 			<img src="assets/tegennatuur.jpg" />
 
 			<p class="sublead">Een systematischer ordening dan de <em>biologische taxonomie</em> is nauwelijks te vinden, maar wordt weinig gebruikt.</p>
+
+			ga rechtstreeks naar 
+			<a href="app2/gebieden/?gebied=Q1910627">Binnenveld</a> |
+			<a href="app2/gebieden/?gebied=Q2648552">Ulvenhoutse Bos</a> |
+			<a href="app2/gebieden/?gebied=Q13731828">Ilperveld, Varkensland, Oostzanerveld & Twiske</a> |
+			<a href="app2/gebieden/?gebied=Q5317510">Voornes Duin</a>
+
+			<br /><br />
+			of kies een gebied uit de lijst
+			<form action="app2/gebieden/" method="get">
+
+			<select name="gebied" onchange="this.form.submit()">
+				<option value=""> -- kies een gebied -- </option>
+				<?= $geboptions ?>
+			</select>
+
+			</form>
 			
 			ga rechtstreeks naar
 			<a href="app2/soorten/soort.php?taxonId=Q133128">Grove Den</a> |
@@ -117,7 +142,7 @@ foreach ($vogelen as $vogel){
 
 			<select name="taxonId" onchange="this.form.submit()">
 				<option value=""> -- kies een taxon -- </option>
-				<?= $vogeloptions ?>
+				<?= $taxoptions ?>
 			</select>
 
 			</form>
