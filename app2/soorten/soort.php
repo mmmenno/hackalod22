@@ -72,7 +72,7 @@ if (!empty(queryIndividuals($taxonId))) {
 }
 ?>
 <div class="contentcircle">
-    <h1><a href="<?=$wikiURI?>"><?=$taxonName?></a></h1>
+    <h1><a href="<?=$wikiURI?>"><?=ucfirst($taxonName)?></a></h1>
 </div>
 </body>
 </html>

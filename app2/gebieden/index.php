@@ -243,9 +243,10 @@ $gebied_json = file_get_contents($gebieds_json_url);
     });
     group.on("mouseover", function (e) {
       var c = e.layer; // e.target is the group itself.
+      var taxon = c.options.label[0].toUpperCase() + c.options.label.substring(1) 
       c.bindPopup(
         //'<img src=plaatje?taxonid="'+c.options.wikidata+'" height=150/>'+
-        '<a href="../soorten/soort.php?taxonId='+c.options.wikidata+'">'+c.options.label+'</a>').openPopup();
+        '<a href="../soorten/soort.php?taxonId='+c.options.wikidata+'">'+taxon+'</a>').openPopup();
     });
 
 </script>
