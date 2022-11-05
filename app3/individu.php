@@ -12,7 +12,7 @@ include("options.php");
 // Wikidata info van dit individu ophalen
 
 $sparql = "
-SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?wpen ?wpnl WHERE {
+SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work ?col ?wpen ?wpnl WHERE {
   VALUES ?item { wd:" . $_GET['individu'] . " }
   ?item wdt:P10241 ?taxon .
   OPTIONAL {
