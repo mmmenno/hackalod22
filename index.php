@@ -24,6 +24,16 @@ foreach ($vogelen as $vogel){
 
 }
 
+if (($handle = fopen("data/QTaxonLabels.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        $wikiID = str_replace("http://www.wikidata.org/entity/", "", $data[0]);
+		$label = $data[1];
+		$taxonoptions[$wikiID] = $label;
+    }
+    fclose($handle);
+}
+
+asort($taxonoptions);
 
 $taxoptions = "";
 foreach ($taxonoptions as $k => $v){
@@ -110,15 +120,33 @@ foreach ($taxonoptions as $k => $v){
 		</div>
 		<div class="col-md-4">
 
-			<img src="assets/tegennatuur.jpg" />
+			<img src="assets/soorten.jpg" />
 
 			<p class="sublead">Een systematischer ordening dan de <em>biologische taxonomie</em> is nauwelijks te vinden, maar wordt weinig gebruikt.</p>
 
+			ga rechtstreeks naar
+			<a href="app2/soorten/soort.php?taxonId=Q133128">Grove Den</a> |
+            <!-- kingfisher, heeft dijkshoorn-images -->
+			<a href="app2/soorten/soort.php?taxonId=Q79915">IJsvogel</a> |
+			<a href="app2/soorten/soort.php?taxonId=Q25418">Putter</a> |
+			<a href="app2/soorten/soort.php?taxonId=Q7224565">Radijs</a>  |
+			<a href="app2/soorten/soort.php?taxonId=Q168514">Zomertortel</a> 
+
+			<br /><br />
+			of kies een taxon uit de lijst
+			<form action="app2/soorten/soort.php" method="get">
+
+			<select name="taxonId" onchange="this.form.submit()">
+				<option value=""> -- kies een taxon -- </option>
+				<?= $taxoptions ?>
+			</select>
+
+			</form>
+			
+
 			ga rechtstreeks naar 
 			<a href="app2/gebieden/?gebied=Q1910627">Binnenveld</a> |
-			<a href="app2/gebieden/?gebied=Q2648552">Ulvenhoutse Bos</a> |
-			<a href="app2/gebieden/?gebied=Q13731828">Ilperveld, Varkensland, Oostzanerveld & Twiske</a> |
-			<a href="app2/gebieden/?gebied=Q5317510">Voornes Duin</a>
+			<a href="app2/gebieden/?gebied=Q2648552">Ulvenhoutse Bos</a>
 
 			<br /><br />
 			of kies een gebied uit de lijst
@@ -131,30 +159,14 @@ foreach ($taxonoptions as $k => $v){
 
 			</form>
 			
-			ga rechtstreeks naar
-			<a href="app2/soorten/soort.php?taxonId=Q133128">Grove Den</a> |
-            <!-- kingfisher, heeft dijkshoorn-images -->
-			<a href="app2/soorten/soort.php?taxonId=Q79915">Kingfisher</a> |
-
-			<br /><br />
-			of kies een taxon uit de lijst
-			<form action="app2/soorten/soort.php" method="get">
-
-			<select name="taxonId" onchange="this.form.submit()">
-				<option value=""> -- kies een taxon -- </option>
-				<?= $taxoptions ?>
-			</select>
-
-			</form>
-
+			
 
 			gemaakt met:
 			
 			<ul>
-				<li>Botanische prenten UvA UB</li>
-				<li>Dijkshoorn</li>
-				<li>Nederlandsche vogelen van Nozeman en Sepp (via Commons)</li>
-				<li>Waarnemingen via GBIF API</li>
+				<li><a href="https://www.uvaerfgoed.nl/beeldbank/nl/xsearch?metadata=botanie">Botanische prenten Bijzondere Collecties UvA</a></li>
+				<li><a href="https://www.kb.nl/ontdekken-bewonderen/topstukken/nederlandsche-vogelen">Nederlandsche vogelen van Nozeman en Sepp</a></li>
+				<li>Waarnemingen via <a href="https://www.gbif.org/">GBIF</a> API</li>
 			</ul>
 
 		</div>

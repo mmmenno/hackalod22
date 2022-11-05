@@ -7,6 +7,8 @@ body{
 }
 img{
 	width: 100%;
+	border-top: 5px solid #ba4fbe;
+	border-bottom: 5px solid #ba4fbe;
 }
 h1{
 	font-family: 'Times New Roman', serif;
