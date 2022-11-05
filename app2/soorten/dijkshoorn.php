@@ -8,7 +8,7 @@ function dijkshoornImages($taxonId) {
     $sparql = "
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX oa: <http://www.w3.org/ns/oa#>
-        SELECT DISTINCT ?taxon ?image
+        SELECT DISTINCT ?taxon ?image ?taxonName
         WHERE {
           #?cho oa:hasBody/owl:sameAs <http://www.wikidata.org/entity/$taxonId> .
           ?cho oa:hasBody/owl:sameAs ?taxon .
