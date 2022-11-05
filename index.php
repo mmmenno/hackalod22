@@ -145,8 +145,8 @@ foreach ($taxonoptions as $k => $v){
 			
 
 			ga rechtstreeks naar 
-			<a href="app2/gebieden/?gebied=Q1910627">Binnenveld</a> |
-			<a href="app2/gebieden/?gebied=Q2648552">Ulvenhoutse Bos</a>
+			<a href="app2/gebieden/?gebied=Q2796795">Boetelerveld</a> |
+			<a href="app2/gebieden/?gebied=Q2114591">Bakkeveense Duinen</a>
 
 			<br /><br />
 			of kies een gebied uit de lijst
