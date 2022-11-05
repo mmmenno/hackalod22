@@ -75,6 +75,8 @@ function commonsImages($taxonId, $fromNozeman = false) {
           return array(
               "entity" => $row['file']['value'],
               "image" => "$full_image_url?width=300",
+              'taxonName' => $row['taxonName']['value'],
+              'taxonLabel' => $row['depictedLabelNL']['value'],
           );
       },
       json_decode($response, true)['results']['bindings']

@@ -39,7 +39,10 @@ function uvaImages($taxonId) {
             return array(
                 "image" => $smaller_image_url,
                 'uri' => $bigger_image_url,
-                'from' => 'uva'
+                'from' => 'uva',
+                //'taxonName' => $row['taxonName']['value'],
+                // FIXME find the Dutch label for this:
+                //'taxonLabel' => $row['taxonName']['value']
             );
         },
         json_decode($json,true)['results']['bindings']

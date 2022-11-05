@@ -2,11 +2,14 @@
 function wikidataImages($taxonId) {
     $endpoint = 'https://query.wikidata.org/sparql';
     $sparql = <<<EOD
-        SELECT ?image ?itemLabel 
+        SELECT ?image ?itemLabel ?depictedLabelNL 
         WHERE 
         {
           wd:$taxonId wdt:P18 ?image .
-          SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } # Helps get the label in your language, if not, then en language
+          SERVICE wikibase:label {
+              bd:serviceParam wikibase:language "nl". 
+              wd:$taxonId rdfs:label ?depictedLabelNL .
+          }
         }
     EOD;
     $json = getSparqlResults($endpoint,$sparql);
@@ -15,7 +18,8 @@ function wikidataImages($taxonId) {
             return array(
                 "image" => $row['image']['value'],
                 "uri" => $row['image']['value'],
-                'from' => ''
+                'from' => '',
+                'taxonLabel' => $row['depictedLabelNL']['value'],
             );
         },
         json_decode($json,true)['results']['bindings']
