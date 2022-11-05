@@ -83,13 +83,15 @@ $speciesids = array();
 $occurrences = array();
 
 foreach ($data['results'] as $rec) {
-    $occurrences[] = array(
-        "lat" => $rec['decimalLatitude'],
-        "lon" => $rec['decimalLongitude'],
-        "speciesKey" => $rec['speciesKey']
-    );
-    if(!in_array($rec['speciesKey'],$speciesids)){
-        $speciesids[] = $rec['speciesKey'];
+    if (isset($rec['speciesKey'])) {
+        $occurrences[] = array(
+            "lat" => $rec['decimalLatitude'],
+            "lon" => $rec['decimalLongitude'],
+            "speciesKey" => $rec['speciesKey']
+        );
+        if(!in_array($rec['speciesKey'],$speciesids)){
+            $speciesids[] = $rec['speciesKey'];
+        }
     }
 }
 
@@ -117,11 +119,19 @@ $data = json_decode($json,true);
 //print_r($data);
 //die;
 
+include("../soorten/dijkshoorn.php");
+include("../soorten/uva.php");
+
 foreach ($occurrences as $ockey => $ocvalue) {
     foreach ($data['results']['bindings'] as $wdkey => $wdvalue) {
         if($ocvalue['speciesKey'] == $wdvalue['gbif']['value']){
-            $occurrences[$ockey]['wikidata'] = str_replace("http://www.wikidata.org/entity/","",$wdvalue['item']['value']);
+            $taxonId = str_replace("http://www.wikidata.org/entity/","",$wdvalue['item']['value']);
+            $occurrences[$ockey]['wikidata'] = $taxonId;
             $occurrences[$ockey]['label'] = $wdvalue['itemLabel']['value'];
+            print($taxonId);
+            $occurrences[$ockey]['has_heritage'] = 
+              !empty(dijkshoornImages($taxonId));
+              #!empty(dijkshoornImages($taxonId)) || !empty(uvaImages($taxonId));
         }
     }
 }
