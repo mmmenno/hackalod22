@@ -6,10 +6,10 @@
 <?php
 
 include("../../app3/functions.php");
-
 include("uva.php");
 include("commons.php");
 include("dijkshoorn.php");
+include("nozeman.php");
 
 include("../../app3/individuals_query.php");
 
@@ -18,6 +18,7 @@ $taxonId = $_GET["taxonId"];
 $images = array_merge(
     //commonsImages($taxonId, true),
     uvaImages($taxonId),
+    nozemanImages($taxonId),
     dijkshoornImages($taxonId),
     //commonsImages($taxonId)
 );
