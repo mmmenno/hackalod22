@@ -19,7 +19,7 @@ if(!isset($_GET['gebied'])){
     $gebiedid = $_GET['gebied'];
 }
 
-echo $locality;
+#echo $locality;
 
 
 // STAP 1: BOUNDS BEREKENEN
@@ -128,7 +128,6 @@ foreach ($occurrences as $ockey => $ocvalue) {
             $taxonId = str_replace("http://www.wikidata.org/entity/","",$wdvalue['item']['value']);
             $occurrences[$ockey]['wikidata'] = $taxonId;
             $occurrences[$ockey]['label'] = $wdvalue['itemLabel']['value'];
-            print($taxonId);
             $occurrences[$ockey]['has_heritage'] = 
               !empty(dijkshoornImages($taxonId));
               #!empty(dijkshoornImages($taxonId)) || !empty(uvaImages($taxonId));
@@ -219,8 +218,10 @@ $gebied_json = file_get_contents($gebieds_json_url);
 
     customCircleMarker = L.CircleMarker.extend({
       options: { 
-          kaas: 'Custom data!',
-          anotherCustomProperty: 'More data!'
+          wikidata: 'wikidata',
+          speciesKey: 'speciesKey',
+          label: 'label',
+          has_heritage: 'has_heritage'
       }
     });
 
@@ -232,10 +233,12 @@ $gebied_json = file_get_contents($gebieds_json_url);
         [item['lat'], item['lon']], 
         { radius: 15, 
           color: "black", 
-          fillColor: "red",
+          fillColor: item['has_heritage']?"red":"white",
+          fillOpacity: item['has_heritage']?1:0.4,
           wikidata: item["wikidata"],
           speciesKey: item['speciesKey'],
-          label: item['label']
+          label: item['label'],
+          has_heritage: item['has_heritage']
         }
       ).addTo(group);
     });
@@ -245,19 +248,6 @@ $gebied_json = file_get_contents($gebieds_json_url);
         //'<img src=plaatje?taxonid="'+c.options.wikidata+'" height=150/>'+
         '<a href="../soorten/soort.php?taxonId='+c.options.wikidata+'">'+c.options.label+'</a>').openPopup();
     });
-
-//    let popup = L.popup();
-//    map.addEventListener("click", 
-//        function(e) {
-//            popup
-//                .setLatLng(e.latlng)
-//                .setContent(
-//                    "You clicked the map at -<br>" + 
-//                    "<b>lon:</b> " + e.latlng.lng + "<br>" + 
-//                    "<b>lat:</b> " + e.latlng.lat
-//                )
-//                .openOn(map);
-//    });
 
 </script>
 </body>
