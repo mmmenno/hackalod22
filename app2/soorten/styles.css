@@ -48,22 +48,22 @@ a{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color:#ffc6ff;
+	background-color:#fff;
 	border-radius: 50%;
-	border: 10px solid dodgerblue;
+	border: 10px solid #ccc;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .uva {
-	border: 10px solid yellow;
+	border: 10px solid #68d5ef;
 }
 .nozeman {
-	border: 10px solid dodgerblue;
+	border: 10px solid #ffc6ff;
 }
 .dijkshoorn {
-	border: 10px solid darkred;
+	border: 10px solid #ff7589;
 }
 .content{
 	position: absolute;

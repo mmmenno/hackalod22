@@ -15,6 +15,7 @@ function wikidataImages($taxonId) {
             return array(
                 "image" => $row['image']['value'],
                 "uri" => $row['image']['value'],
+                'from' => ''
             );
         },
         json_decode($json,true)['results']['bindings']

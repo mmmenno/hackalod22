@@ -63,7 +63,7 @@ foreach ($images as $img) {
 	}
     ?>
 	<a href="<?= $img['uri']?>" class="imgcircleholder" style="<?= $pos ?>" title="">
-        <div class="circle" style="background-image: url(<?= $img['image'] ?>?width=500);z-index:99"></div>
+        <div class="circle" <?= ($img['from']) ?? ''?> style="background-image: url(<?= $img['image'] ?>?width=500);z-index:99"></div>
 	</a>
 <?php }
 

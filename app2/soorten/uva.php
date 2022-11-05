@@ -39,6 +39,7 @@ function uvaImages($taxonId) {
             return array(
                 "image" => $smaller_image_url,
                 'uri' => $bigger_image_url,
+                'from' => 'uva'
             );
         },
         json_decode($json,true)['results']['bindings']
