@@ -24,6 +24,12 @@ SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?wpen
   OPTIONAL {
     ?item wdt:P18 ?img .
   }
+  optional {
+    ?item wdt:1441 ?work .
+  }
+  optional {
+    ?item wdt:195 ?col .
+  }
   optional{
     ?wpen schema:about ?item .
     ?wpen schema:isPartOf <https://en.wikipedia.org/> .
