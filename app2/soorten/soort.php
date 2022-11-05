@@ -26,7 +26,7 @@ foreach (uvaImages($taxonId) as $row) {
 }
 print("<!-- results from dijkshoorn -->\n");
 foreach (dijkshoornImages($taxonId) as $row) {
-    $full_image_url = $row['img']['value'];
+    $full_image_url = $row['image']['value'];
     print("<img src='$full_image_url' height='300'/>");
 }
 print("<!-- other results from other commons -->\n");
