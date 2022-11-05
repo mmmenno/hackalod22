@@ -8,12 +8,12 @@ function dijkshoornImages($taxonId) {
     $sparql = "
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX oa: <http://www.w3.org/ns/oa#>
-        SELECT DISTINCT ?taxon ?img
+        SELECT DISTINCT ?taxon ?image
         WHERE {
           #?cho oa:hasBody/owl:sameAs <http://www.wikidata.org/entity/$taxonId> .
           ?cho oa:hasBody/owl:sameAs ?taxon .
-          ?cho oa:hasTarget/oa:hasSource ?img .
-          FILTER(regex(?img, 'ggpht.com', 'i'))
+          ?cho oa:hasTarget/oa:hasSource ?image .
+          FILTER(regex(?image, 'ggpht.com', 'i'))
         }
     ";
     $endpoint = "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/rma-dijkshoorn/services/rma-dijkshoorn/sparql";
