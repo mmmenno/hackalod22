@@ -91,7 +91,11 @@ foreach ($data as $k => $v) {
 <h1><?= $individu['itemLabel']['value'] ?></h1>
 
 <p><?= $individu['itemDescription']['value'] ?></p>
-
+	
+<!--<?php if(isset($individu['colLabel']['value'])) ?>-->
+	
+<!--<?php if(isset($individu['workLabel']['value'])) ?>-->
+	
 <?php if(isset($individu['wpnl']['value'])){ ?>
 	<a href="<?= $individu['wpnl']['value'] ?>">🇳🇱</a>
 <?php } ?>
