@@ -54,6 +54,13 @@ a{
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
+
+.uva {
+	border: 10px solid yellow;
+}
+.nozeman {
+	border: 10px solid dodgerblue;
+}
 .content{
 	position: absolute;
 	width: 150px;

@@ -23,6 +23,17 @@ $images = array_merge(
     //commonsImages($taxonId)
 );
 
+$taxonName = '';
+$wikiURI='';
+foreach($images as $img) {
+    if (array_key_exists('taxonLabel', $img)) {
+        $taxonName= $img['taxonLabel'];
+        if (strstr($img['uri'], 'wikidata')) {
+            $wikiURI = $img['uri'];
+        }
+    }
+}
+
 #foreach ($images as $row) {
 #    print("<img src='${row['image']}' height='300'/>");
 #}
@@ -39,6 +50,7 @@ $positions = array(
 	"left: 55%; top: 45%"
 );
 $i = 0;
+
 foreach ($images as $img) { 
 
 	$pos = $positions[$i];
@@ -49,7 +61,7 @@ foreach ($images as $img) {
 	}
     ?>
 	<a href="<?= $img['uri']?>" class="imgcircleholder" style="<?= $pos ?>" title="">
-        <div class="circle" style="background-image: url(<?= $img['image'] ?>?width=500);"></div>
+        <div class="circle" style="background-image: url(<?= $img['image'] ?>?width=500);z-index:99"></div>
 	</a>
 <?php }
 
@@ -57,5 +69,8 @@ if (!empty(queryIndividuals($taxonId))) {
     print("<a href='../../app3/taxon.php?taxonid=$taxonId'>We Are All Individuals!!</a>");
 }
 ?>
+<div class="contentcircle">
+    <h1><a href="<?=$wikiURI?>"><?=$taxonName?></a></h1>
+</div>
 </body>
 </html>
