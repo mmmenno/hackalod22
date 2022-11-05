@@ -1,26 +1,16 @@
 body{
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 24px;
 	background-image: url(../assets/bg.png);
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
-  	background-attachment: fixed;
 	background-size: cover; /* Resize the background image to cover the entire container */
 }
 body#taxon{
 	text-align: center;
 }
 h1{
-	margin-top: 4px;
-	margin-bottom: 1px;
-}
-.menu{
-	position: absolute;
-	z-index: 1000;
-	left: 0px;
-	top: 0px;
-	background-color: #000;
-	font-size: 16px;
+	margin-top: 60px;
 }
 a{
 	color: #dc73d6;
@@ -42,33 +32,11 @@ a{
 	left: 30px;
 	top: -30px;
 	width: 400px;
-	height: 340px;
-	border-radius: 50%;
-	text-align: center;
-	padding-top: 60px;
-
-}
-.quotecircle{
-	background-color: #a984aa;
-	color: #fff;
-	font-family: 'Times New Roman', serif;
-	font-weight: bold;
-	font-size: 20px;
-	position: absolute;
-	right: 250px;
-	bottom: -200px;
-	width: 500px;
-	height: 450px;
+	height: 350px;
 	border-radius: 50%;
 	text-align: center;
 	padding-top: 50px;
 
-}
-p.quote{
-	padding: 50px 50px 10px 50px;
-}
-p.krant a{
-	color: #fff;
 }
 .imgcircleholder{
 	display: inline-block;

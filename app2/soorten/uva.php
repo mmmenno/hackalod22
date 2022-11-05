@@ -1,5 +1,6 @@
 <?php
 
+# For example Q133128
 function uvaImages($taxonId) {
     $sparql = "
         PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -11,7 +12,7 @@ function uvaImages($taxonId) {
         PREFIX wdt: <http://www.wikidata.org/prop/direct/>
         PREFIX wd: <http://www.wikidata.org/entity/>
         
-        SELECT ?depictsURI ?botanic ?taxonName ?imageURL ?gbif
+        SELECT ?depictsURI ?botanic ?taxonName ?image ?gbif
         WHERE {
           SERVICE <https://query.wikidata.org/sparql> {
                 ?depictsURI wdt:P31 wd:Q16521 ;    # instance of taxon
@@ -23,13 +24,22 @@ function uvaImages($taxonId) {
           ?botanic dc:subject ?subject ;
                  dc:title ?title ;
                  mrel:dpc ?depictsURI ;
-                 foaf:depiction ?imageURL .
+                 foaf:depiction ?image .
         
           FILTER ( REGEX(?subject,'^botanie') ) .  # botanic images only
     }";
     $endpoint = 'https://api.lod.uba.uva.nl/datasets/UB-UVA/Beeldbank/services/virtuoso/sparql';
     $json = getSparqlResults($endpoint,$sparql);
-    return json_decode($json,true)['results']['bindings'];
+    #print($json);
+    return array_map(
+        function($row) {
+            $full_image_url = $row['image']['value'];
+            return array(
+                "image" => str_replace("full/full", "full/300,", $full_image_url),
+            );
+        },
+        json_decode($json,true)['results']['bindings']
+    );
 }
 
 ?>
