@@ -121,6 +121,18 @@ $data = json_decode($json,true);
 
 include("../soorten/dijkshoorn.php");
 include("../soorten/uva.php");
+$taxon = 'Q25403';
+function uvaHasHeritage($taxonId) {
+    $gebieden_data = "../../data/QTaxonLabels.csv";
+    if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
+        while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            if (strstr($row[0], $taxonId)){
+                return true;
+            }
+        }
+        fclose($handle);
+    }
+}
 
 foreach ($occurrences as $ockey => $ocvalue) {
     foreach ($data['results']['bindings'] as $wdkey => $wdvalue) {
@@ -129,8 +141,8 @@ foreach ($occurrences as $ockey => $ocvalue) {
             $occurrences[$ockey]['wikidata'] = $taxonId;
             $occurrences[$ockey]['label'] = $wdvalue['itemLabel']['value'];
             $occurrences[$ockey]['has_heritage'] = 
-              !empty(dijkshoornImages($taxonId));
-              #!empty(dijkshoornImages($taxonId)) || !empty(uvaImages($taxonId));
+              #!empty(dijkshoornImages($taxonId));
+              !empty(dijkshoornImages($taxonId)) || !empty(uvaHasHeritage($taxonId));
         }
     }
 }
