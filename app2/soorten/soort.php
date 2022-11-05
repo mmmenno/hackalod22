@@ -47,11 +47,10 @@ foreach ($images as $img) {
 	if($i>8){
 		break;
 	}
-
     ?>
-	<div class="imgcircleholder" style="<?= $pos ?>">
-		<div class="circle" style="background-image: url(<?= $img['image'] ?>?width=500);"></div>
-	</div>
+	<a href="<?= $img['uri']?>" class="imgcircleholder" style="<?= $pos ?>" title="">
+        <div class="circle" style="background-image: url(<?= $img['image'] ?>?width=500);"></div>
+	</a>
 <?php }
 
 if (!empty(queryIndividuals($taxonId))) {

@@ -15,7 +15,10 @@ function nozemanImages($taxonId) {
     return array_map(
         function($row) {
             return array(
-                "image" => $row['image']
+                "image" => $row['image'],
+                'taxonName' => $row['taxonName'],
+                'taxonLabel' => $row['depictedLabelNL'],
+                'uri' => $row['depicted'],
             );
         },
         $filtered

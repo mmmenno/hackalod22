@@ -36,6 +36,7 @@ function uvaImages($taxonId) {
             $full_image_url = $row['image']['value'];
             return array(
                 "image" => str_replace("full/full", "full/300,", $full_image_url),
+                'uri' => $full_image_url,
             );
         },
         json_decode($json,true)['results']['bindings']
