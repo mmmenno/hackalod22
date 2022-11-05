@@ -1,9 +1,9 @@
 <?php
 
-function queryIndividuals() {
+function queryIndividuals($taxonId) {
     $sparql = "
       SELECT ?item ?itemLabel ?taxon ?taxonLabel ?afb ?dob ?dod ?wpen ?wpnl WHERE {
-        VALUES ?taxon { wd:" . $_GET['taxonid'] . " }
+        VALUES ?taxon { wd:" . $taxonId . " }
         ?item wdt:P10241 ?taxon .
         optional{
           ?item wdt:P18 ?afb .

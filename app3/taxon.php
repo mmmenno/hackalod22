@@ -9,7 +9,7 @@ include("individuals_query.php");
 //print_r($data);
 
 $imgs = array();
-$data = queryIndividuals();
+$data = queryIndividuals($_GET['taxonid']);
 foreach ($data as $row) {
 	if(isset($row['afb']['value'])){
 		$imgs[] = array(
