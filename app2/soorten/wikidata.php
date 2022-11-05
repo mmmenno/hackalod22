@@ -5,7 +5,7 @@ function wikidataImages($taxonId) {
         SELECT ?image ?itemLabel 
         WHERE 
         {
-          wd:Q27236 wdt:P18 ?image . # Must be of a cat
+          wd:$taxonId wdt:P18 ?image .
           SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } # Helps get the label in your language, if not, then en language
         }
     EOD;
