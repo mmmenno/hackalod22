@@ -1,4 +1,7 @@
 <html>
+<head>
+<link rel="stylesheet" href="styles.css" />
+</head>
 <body>
 <?php
 
@@ -11,31 +14,45 @@ include("dijkshoorn.php");
 include("../../app3/individuals_query.php");
 
 $taxonId = $_GET["taxonId"];
-print("<!-- results from Nozeman -->\n");
-foreach (commonsImages($taxonId, true) as $row) {
-    $file_entity_url = $row['file']['value'];
-    $full_image_url = $row['image']['value'];
-    print("<!-- Nozeman $file_entity_url -->");
-    print("<img src='$full_image_url?width=300' height='300'/>");
-}
-print("<!-- results from uva -->\n");
-foreach (uvaImages($taxonId) as $row) {
-    $full_url = $row['imageURL']['value'];
-    $small_url = str_replace("full/full", "full/300,", $full_url);
-    print("<img src='$small_url' height='300'/>");
-}
-print("<!-- results from dijkshoorn -->\n");
-foreach (dijkshoornImages($taxonId) as $row) {
-    $full_image_url = $row['image']['value'];
-    print("<img src='$full_image_url' height='300'/>");
-}
-print("<!-- other results from other commons -->\n");
-foreach (commonsImages($taxonId) as $row) {
-    $file_entity_url = $row['file']['value'];
-    $full_image_url = $row['image']['value'];
-    print("<!-- $file_entity_url -->");
-    print("<img src='$full_image_url?width=300' height='300'/>");
-}
+
+$images = array_merge(
+    commonsImages($taxonId, true),
+    uvaImages($taxonId),
+    dijkshoornImages($taxonId),
+    commonsImages($taxonId)
+);
+
+#foreach ($images as $row) {
+#    print("<img src='${row['image']}' height='300'/>");
+#}
+$positions = array(
+	"left: 5%; top: 70%",
+	"left: 25%; top: 8%",
+	"left: 45%; top: 40%",
+	"left: 70%; top: 65%",
+	"left: 53%; top: 10%",
+	"left: 85%; top: 00%",
+	"left: 05%; top: 00%",
+	"left: 30%; top: 70%",
+	"left: 85%; top: 60%",
+	"left: 55%; top: 45%"
+);
+$i = 0;
+foreach ($images as $img) { 
+
+	$pos = $positions[$i];
+	$i++;
+
+	if($i>8){
+		break;
+	}
+
+    ?>
+	<div class="imgcircleholder" style="<?= $pos ?>">
+		<div class="circle" style="background-image: url(<?= $img['image'] ?>?width=500);"></div>
+	</div>
+<?php }
+
 if (!empty(queryIndividuals($taxonId))) {
     print("<a href='../../app3/taxon.php?taxonid=$taxonId'>We Are All Individuals!!</a>");
 }

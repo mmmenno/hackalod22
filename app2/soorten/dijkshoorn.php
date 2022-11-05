@@ -1,10 +1,7 @@
 <?php
 
+# for example Q133128
 function dijkshoornImages($taxonId) {
-    function taxon_match($var) {
-        return $var == $taxonId;
-    }
-
     $sparql = "
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX oa: <http://www.w3.org/ns/oa#>
@@ -27,5 +24,12 @@ function dijkshoornImages($taxonId) {
         }
     );
     #print($filtered);
-    return $filtered;
+    return array_map(
+        function($row) {
+            return array(
+                "image" => $row['image']['value']
+            );
+        },
+        $filtered
+    );
 }

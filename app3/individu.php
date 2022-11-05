@@ -12,7 +12,7 @@ include("options.php");
 // Wikidata info van dit individu ophalen
 
 $sparql = "
-SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work ?col ?wpen ?wpnl WHERE {
+SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work ?imbdId ?col ?wpen ?wpnl WHERE {
   VALUES ?item { wd:" . $_GET['individu'] . " }
   ?item wdt:P10241 ?taxon .
   OPTIONAL {
@@ -25,10 +25,13 @@ SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work
     ?item wdt:P18 ?img .
   }
   optional {
-    ?item wdt:1441 ?workLabel .
+    ?item wdt:P1441 ?workLabel .
   }
   optional {
-    ?item wdt:195 ?colLabel .
+    ?item wdt:P345 ?imbdId .
+  }
+  optional {
+    ?item wdt:P195 ?colLabel .
   }
   optional{
     ?wpen schema:about ?item .
@@ -114,6 +117,7 @@ foreach ($delpherdata as $key => $value) {
 <!--<?php if(isset($individu['colLabel']['value'])) ?>-->
 	
 <!--<?php if(isset($individu['workLabel']['value'])) ?>-->
+<!--hier moet de workLavels herhaalt worden als het individu in meerdere werken voorkomt-->
 	
 <?php if(isset($individu['wpnl']['value'])){ ?>
 	<a href="<?= $individu['wpnl']['value'] ?>">🇳🇱</a>
