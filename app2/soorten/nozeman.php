@@ -19,6 +19,7 @@ function nozemanImages($taxonId) {
                 'taxonName' => $row['taxonName'],
                 'taxonLabel' => $row['depictedLabelNL'],
                 'uri' => $row['depicted'],
+                'from' => 'nozeman'
             );
         },
         $filtered
