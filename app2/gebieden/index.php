@@ -192,8 +192,7 @@ $gebied_json = file_get_contents($gebieds_json_url);
 
 </head>
 <body>
-<h1>Collectie flora en fauna</h1>
-<h2>Natuurgebied <?= $gebied ?></h2>
+<h2>Natuurgebied <?= $gebieds_naam ?></h2>
 
 <div id="map" style="height: 100%; margin-bottom: 24px; width: 100%; position:fixed;"></div>
 <script>
