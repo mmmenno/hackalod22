@@ -7,7 +7,6 @@ $radius = 10;
 $qid = "Q13742779";
 $year = 1900;
 
-$gebieden_data = "../data/natura2000-met-wikidata.csv";
 
 if(!isset($_GET['gebied'])){
   $gebied = "Q2800398";
@@ -16,7 +15,7 @@ if(!isset($_GET['gebied'])){
 }
 
 $gebieds_json_url = "";
-
+$gebieden_data = "../data/natura2000-met-wikidata.csv";
 $options = "";
 if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
     while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
