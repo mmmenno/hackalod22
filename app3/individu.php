@@ -95,6 +95,7 @@ foreach ($data as $k => $v) {
 <!--<?php if(isset($individu['colLabel']['value'])) ?>-->
 	
 <!--<?php if(isset($individu['workLabel']['value'])) ?>-->
+<!--hier moet de workLavels herhaalt worden als het individu in meerdere werken voorkomt-->
 	
 <?php if(isset($individu['wpnl']['value'])){ ?>
 	<a href="<?= $individu['wpnl']['value'] ?>">🇳🇱</a>
