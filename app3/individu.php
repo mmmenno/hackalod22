@@ -25,10 +25,10 @@ SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work
     ?item wdt:P18 ?img .
   }
   optional {
-    ?item wdt:1441 ?work .
+    ?item wdt:1441 ?workLabel .
   }
   optional {
-    ?item wdt:195 ?col .
+    ?item wdt:195 ?colLabel .
   }
   optional{
     ?wpen schema:about ?item .
@@ -91,7 +91,11 @@ foreach ($data as $k => $v) {
 <h1><?= $individu['itemLabel']['value'] ?></h1>
 
 <p><?= $individu['itemDescription']['value'] ?></p>
-
+	
+<!--<?php if(isset($individu['colLabel']['value'])) ?>-->
+	
+<!--<?php if(isset($individu['workLabel']['value'])) ?>-->
+	
 <?php if(isset($individu['wpnl']['value'])){ ?>
 	<a href="<?= $individu['wpnl']['value'] ?>">🇳🇱</a>
 <?php } ?>
