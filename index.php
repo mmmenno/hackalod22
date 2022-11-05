@@ -13,6 +13,17 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
     fclose($handle);
 }
 
+
+// nozeman
+$vogelen = json_decode(file_get_contents('data/voogelen.json'), true);
+$vogeloptions = "";
+foreach ($vogelen as $vogel){
+	$wikiID = trim($vogel['depicted'], 'http://www.wikidata.org/entity/');
+	$label = $vogel['depictedLabelNL'];
+	$vogeloptions .= "<option value=\"" . $wikiID ."\">" . $label . "</option>\n";
+
+}
+
 ?>
 <html>
 <head>
@@ -95,21 +106,20 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 			<p class="sublead">Een systematischer ordening dan de <em>biologische taxonomie</em> is nauwelijks te vinden, maar wordt weinig gebruikt.</p>
 
-			<h4>ga rechtstreeks naar</h4>
-			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
-			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> | 
-			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> | 
-			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a>
+			ga rechtstreeks naar
+			<a href="app2/soorten/soort.php?taxonId=Q115004786">Grove Den</a> |
 
-			<h4>of kies een taxon</h4>
-			<form action="app3/taxon.php" method="get">
+			<br /><br />
+			of kies een taxon uit de lijst
+			<form action="app2/soorten/soort.php" method="get">
 
-			<select name="taxonid" onchange="this.form.submit()">
+			<select name="taxonId" onchange="this.form.submit()">
 				<option value=""> -- kies een taxon -- </option>
-				<?= $options ?>
+				<?= $vogeloptions ?>
 			</select>
 
 			</form>
+
 
 			gemaakt met:
 			
