@@ -44,7 +44,9 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 <div id="hellothere" class="container">
 
-	<p class="lead">Collecties bevatten historische gegevens over <span class="bigger">landschappen</span>, informatie over <span class="bigger">soorten</span> en zelfs niet-menselijke <span class="bigger">individuen</span>, maar je moet ze wel kunnen vinden</p>
+	<h1>Natuur in onze cultuur</h1>
+
+	<p class="lead">weergaven van <span class="bigger">landschappen</span>, gegevens over <span class="bigger">soorten</span> en niet-menselijke <span class="bigger">individuen</span><br /> in collecties</p>
 
 	<div class="row">
 		<div class="col-md-12">
@@ -60,7 +62,7 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 		<div class="col-md-4">
 
 			<img src="assets/tegennatuur.jpg" />
-			<p class="sublead">Historische cartografie laat je voorbij je <em>shifting baseline syndrome</em> kijken. Natuurgebieden zijn vast nog ongerept, maar wat is daar vlak buiten in 100 jaar veranderd?</p>
+			<p class="sublead">Historische cartografie laat je voorbij je <em>shifting baseline syndrome</em> kijken. Wat is er de afgelopen eeuw rondom natuurgebieden veranderd?</p>
 
 			ga rechtstreeks naar 
 			<a href="app1/index.php?gebied=Q1910627">Binnenveld</a> | 
@@ -91,7 +93,7 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 			<img src="assets/tegennatuur.jpg" />
 
-			<p class="sublead">Een systematischer ordening dan de <em>biologische taxonomie</em> is nauwelijks te vinden, maar vindt maar eens een erfgoedcollectie waarin die wordt gebruikt.</p>
+			<p class="sublead">Een systematischer ordening dan de <em>biologische taxonomie</em> is nauwelijks te vinden, maar wordt weinig gebruikt.</p>
 
 			<h4>ga rechtstreeks naar</h4>
 			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
@@ -122,7 +124,7 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 			<img src="assets/individuals.jpg" />
 
-			<p class="sublead">Kunnen we loskomen uit onze <em>antropocentrische</em> blik en ook individuen van andere soorten als individuen bekijken?</p>
+			<p class="sublead">Kunnen we loskomen uit onze <em>antropocentrische</em> blik en ook individuen van andere soorten zien?</p>
 
 			<p class="sublead">Brians volgelingen weten: "<em>We are all individuals</em>"!</p>
 

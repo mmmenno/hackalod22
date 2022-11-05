@@ -8,12 +8,20 @@ body{
 img{
 	width: 100%;
 }
+h1{
+	font-family: 'Times New Roman', serif;
+	color: #ba4fbe;
+	font-weight: bold;
+	font-size: 44px;
+	margin-top: 32px;
+	text-align: center;
+}
 .lead{
 	font-family: 'Times New Roman', serif;
 	color: #ba4fbe;
 	font-weight: bold;
 	font-size: 28px;
-	margin-top: 44px;
+	margin-top: 24px;
 	text-align: center;
 }
 .lead .bigger{
