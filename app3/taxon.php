@@ -10,7 +10,7 @@ include("individuals_query.php");
 
 $imgs = array();
 $data = queryIndividuals($_GET['taxonid']);
-foreach ($data as $row) {
+foreach ($data as $k => $row) {
 	if(isset($row['afb']['value'])){
 		$imgs[] = array(
 			"img" => $row['afb']['value'] . "?width=100",
@@ -18,8 +18,32 @@ foreach ($data as $row) {
 			"label" => $row['itemLabel']['value']
 		);
 	}
+	$score = 0;
+	if(isset($row['afb']['value'])){
+		$score++;
+	}
+	if(isset($row['dob']['value'])){
+		$score++;
+	}
+	if(isset($row['wpen']['value'])){
+		$score++;
+	}
+	if(isset($row['wpnl']['value'])){
+		$score++;
+	}
+	$data[$k]['score'] = $score;
 }
 
+function cmp($a, $b)
+{
+    if ($a["score"] == $b["score"]) {
+        return 0;
+    }
+    return ($a["score"] < $b["score"]) ? 1 : -1;
+}
+
+usort($data,"cmp");
+//print_r($data);
 ?>
 <html>
 <head>
@@ -32,11 +56,10 @@ foreach ($data as $row) {
 
 <form action="taxon.php" method="get">
 
-<select name="taxonid">
+<select name="taxonid" onchange="this.form.submit()">
+	<option value=""> -- kies een taxon -- </option>
 	<?= $options ?>
 </select>
-
-<button type="submit">GO</button>
 
 </form>
 
@@ -67,10 +90,10 @@ foreach ($data as $row) {
 				<?= substr($row['dod']['value'],0,4) ?>
 			<?php } ?>
 			<?php if(isset($row['wpen']['value'])){ ?>
-				<a href="<?= $row['wpen']['value'] ?>">en</a>
+				<a href="<?= $row['wpen']['value'] ?>">🇬🇧</a>
 			<?php } ?>
 			<?php if(isset($row['wpnl']['value'])){ ?>
-				<a href="<?= $row['wpnl']['value'] ?>">nl</a>
+				<a href="<?= $row['wpnl']['value'] ?>">🇳🇱</a>
 			<?php } ?>
 		</div>
 	</div>

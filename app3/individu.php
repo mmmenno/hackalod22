@@ -76,6 +76,19 @@ foreach ($data as $k => $v) {
 
 
 
+// en is er nog een delpher quote?
+
+$json = file_get_contents("../data/delpherquotes.json");
+$delpherdata = json_decode($json,true);
+
+$delpher = array();
+foreach ($delpherdata as $key => $value) {
+	if($value['individu'] == $_GET['individu']){
+		$delpher = $value;
+	}
+}
+
+//print_r($delpher);
 
 ?>
 <html>
@@ -87,8 +100,14 @@ foreach ($data as $k => $v) {
 <body id="individu">
 
 
+<div class="menu">
+	<a href="../">&lt; start</a> | 
+	<a href="taxon.php?taxonid=<?= str_replace("http://www.wikidata.org/entity/","",$individu['taxon']['value']) ?>">&lt; alle individuen van het taxon <?= $individu['taxonLabel']['value'] ?></a>
+</div>
+
+
 <div class="contentcircle">
-<h1><?= $individu['itemLabel']['value'] ?></h1>
+<h1><a href="<?= $individu['item']['value'] ?>"><?= $individu['itemLabel']['value'] ?></a></h1>
 
 <p><?= $individu['itemDescription']['value'] ?></p>
 	
@@ -148,15 +167,12 @@ foreach ($data as $k => $v) {
 
 
 
-<form action="taxon.php" method="get">
-
-<select name="taxonid">
-	<?= $options ?>
-</select>
-
-<button type="submit">GO</button>
-
-</form>
+<?php if(count($delpher)){ ?>
+	<div class="quotecircle">
+		<p class="quote">&ldquo;<?= $delpher['tekst'] ?>&rdquo;</p>
+		<p class="krant"><a href="<?= $delpher['artikel'] ?>" target="_blank"><?= $delpher['krant'] ?>, <?= $delpher['datum'] ?></a></p>
+	</div>
+<?php } ?>
 
 
 </body>

@@ -44,9 +44,7 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 <div id="hellothere" class="container">
 
-	<h1>Erfgoedcollecties en de natuurlijke wereld</h1>
-
-
+	<p class="lead">Collecties bevatten allerlei historische gegevens over <span class="bigger">landschappen</span>, afbeeldingen van <span class="bigger">soorten</span> en zelfs niet-menselijke <span class="bigger">individuen</span>, maar je moet ze wel kunnen vinden</p>
 
 	<div class="row">
 		<div class="col-md-12">
@@ -61,18 +59,17 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 	<div class="row">
 		<div class="col-md-4">
 
-			<h2>Tegennatuur</h2>
+			<img src="assets/tegennatuur.jpg" />
+			<p class="sublead">Historische cartografie laat je voorbij je <em>shifting baseline syndrome</em> kijken. Natuurgebieden zijn vast nog ongerept, maar wat is daar vlak buiten in 100 jaar veranderd?</p>
 
-			<img src="tegennatuur.jpg" />
-			<p>Historische cartografie laat veranderingen in het landschap zien. Hoe zit dat met de omgeving van Natura2000 gebieden?</p>
-
-			<h4>ga rechtstreeks naar</h4>
+			ga rechtstreeks naar 
 			<a href="app1/index.php?gebied=Q1910627">Binnenveld</a> | 
 			<a href="app1/index.php?gebied=Q2648552">Ulvenhoutse Bos</a> | 
 			<a href="app1/index.php?gebied=Q13731828">Ilperveld, Varkensland, Oostzanerveld & Twiske</a> | 
 			<a href="app1/index.php?gebied=Q5317510">Voornes Duin</a>
 
-			<h4>of kies een gebied</h4>
+			<br /><br />
+			of kies een gebied uit de lijst
 			<form action="app1/" method="get">
 
 			<select name="gebied" onchange="this.form.submit()">
@@ -82,20 +79,19 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 			</form>
 
-			<h3>Gebruikte datasets</h3>
+			gemaakt met:
 			
 			<ul>
-				<li>Topotijdreis kaarten</li>
+				<li>Topotijdreis kaartlagen</li>
 				<li>Polygonen van Naturalis API</li>
 			</ul>
 
 		</div>
 		<div class="col-md-4">
 
-			<h2>Collectieflora & fauna</h2>
+			<img src="assets/tegennatuur.jpg" />
 
-			<img src="florafauna.jpg" />
-			<p>Buiten de gemeente Utrecht zijn 9.782 vermeldingen gevonden van 1.303 verschillende straten.</p>
+			<p class="sublead">Een systematischer ordening dan de <em>biologische taxonomie</em> is nauwelijks te vinden, maar vindt maar eens een erfgoedcollectie waarin die wordt gebruikt.</p>
 
 			<h4>ga rechtstreeks naar</h4>
 			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
@@ -113,7 +109,7 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 			</form>
 
-			<h3>Gebruikte datasets</h3>
+			gemaakt met:
 			
 			<ul>
 				<li>Botanische prenten UvA UB</li>
@@ -124,20 +120,21 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 		</div>
 		<div class="col-md-4">
 
-			<h2>"We are all individuals"</h2>
+			<img src="assets/individuals.jpg" />
 
-			<img src="individuals.jpg" />
+			<p class="sublead">Kunnen we loskomen uit onze <em>antropocentrische</em> blik en ook individuen van andere soorten als individuen bekijken?</p>
 
-			<p>Erfgoedinstellingen zijn doorgaans nogal antropocentrisch beschreven. Wordt het geen tijd de cartesiaanse scheiding tussen mens en natuur af te breken?</p>
+			<p class="sublead">Brians volgelingen weten: "<em>We are all individuals</em>"!</p>
 
 
-			<h4>ga rechtstreeks naar</h4>
+			ga rechtstreeks naar
 			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
 			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> | 
 			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> | 
 			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a>
 
-			<h4>of kies een taxon</h4>
+			<br /><br />
+			of bekijk individuen van een taxon uit de lijst
 			<form action="app3/taxon.php" method="get">
 
 			<select name="taxonid" onchange="this.form.submit()">
@@ -147,12 +144,12 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 			</form>
 
-			<h3>Gebruikte datasets</h3>
+			gemaakt met:
 
 			<ul>
-				<li>Individuele dieren van Wikidata</li>
-				<li>Afbeeldingen van Commons</li>
-				<li>Quotes uit Delpher</li>
+				<li>Wikidata's <a href="https://www.wikidata.org/wiki/Property:P10241">P10241</a></li>
+				<li><a href="https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service">Wikimedia Commons Query Service</a></li>
+				<li>Quotes uit <a href="https://www.delpher.nl/nl/kranten">Delpher</a></li>
 			</ul>
 
 		</div>
