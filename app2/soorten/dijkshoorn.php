@@ -1,6 +1,6 @@
 <?php
 
-# for example Q133128
+# for example Q79915
 function dijkshoornImages($taxonId) {
     $sparql = "
     PREFIX owl: <http://www.w3.org/2002/07/owl#>
