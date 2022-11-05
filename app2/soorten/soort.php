@@ -40,14 +40,14 @@ foreach($images as $img) {
 #    print("<img src='${row['image']}' height='300'/>");
 #}
 $positions = array(
+	"left: 28%; top: 8%",
+	"left: 50%; top: 40%",
 	"left: 5%; top: 70%",
-	"left: 25%; top: 8%",
-	"left: 45%; top: 40%",
 	"left: 70%; top: 65%",
-	"left: 53%; top: 10%",
+	"left: 58%; top: -05%",
 	"left: 85%; top: 00%",
-	"left: 05%; top: 00%",
-	"left: 30%; top: 70%",
+	"left: -5%; top: 30%",
+	"left: 30%; top: 65%",
 	"left: 85%; top: 60%",
 	"left: 55%; top: 45%"
 );
