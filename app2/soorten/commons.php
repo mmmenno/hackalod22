@@ -63,11 +63,11 @@ function commonsImages($taxonId, $fromNozeman = false) {
         if(str_contains(curl_getinfo($ch)["url"], "UserLogin")) {
             throw new Exception("provide WCQS_AUTH_TOKEN as documented at https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service/API_endpoint");
         }
+        file_put_contents($datafile, $response);
     }
     
     #print("Results\n");
     #print($response);
-    file_put_contents($datafile, $response);
 
     return array_map(
       function($row) {

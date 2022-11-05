@@ -76,9 +76,9 @@ foreach ($vogelen as $vogel){
 			<p class="sublead">Historische cartografie laat je voorbij je <em>shifting baseline syndrome</em> kijken. Wat is er de afgelopen eeuw rondom natuurgebieden veranderd?</p>
 
 			ga rechtstreeks naar 
-			<a href="app1/index.php?gebied=Q1910627">Binnenveld</a> | 
-			<a href="app1/index.php?gebied=Q2648552">Ulvenhoutse Bos</a> | 
-			<a href="app1/index.php?gebied=Q13731828">Ilperveld, Varkensland, Oostzanerveld & Twiske</a> | 
+			<a href="app1/index.php?gebied=Q1910627">Binnenveld</a> |
+			<a href="app1/index.php?gebied=Q2648552">Ulvenhoutse Bos</a> |
+			<a href="app1/index.php?gebied=Q13731828">Ilperveld, Varkensland, Oostzanerveld & Twiske</a> |
 			<a href="app1/index.php?gebied=Q5317510">Voornes Duin</a>
 
 			<br /><br />
@@ -105,9 +105,11 @@ foreach ($vogelen as $vogel){
 			<img src="assets/tegennatuur.jpg" />
 
 			<p class="sublead">Een systematischer ordening dan de <em>biologische taxonomie</em> is nauwelijks te vinden, maar wordt weinig gebruikt.</p>
-
+			
 			ga rechtstreeks naar
-			<a href="app2/soorten/soort.php?taxonId=Q115004786">Grove Den</a> |
+			<a href="app2/soorten/soort.php?taxonId=Q133128">Grove Den</a> |
+            <!-- kingfisher, heeft dijkshoorn-images -->
+			<a href="app2/soorten/soort.php?taxonId=Q79915">Kingfisher</a> |
 
 			<br /><br />
 			of kies een taxon uit de lijst
@@ -140,11 +142,11 @@ foreach ($vogelen as $vogel){
 
 
 			ga rechtstreeks naar
-			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
-			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> | 
-			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> | 
-			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a> | 
-			<a href="app3/individu.php?individu=Q335860">Abul-Abbas</a> | 
+			<a href="app3/individu.php?individu=Q115004786">Tanja</a> |
+			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> |
+			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> |
+			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a> |
+			<a href="app3/individu.php?individu=Q335860">Abul-Abbas</a> |
 			<a href="app3/individu.php?individu=Q2679876">Crystal the Monkey</a>
 
 			<br /><br />

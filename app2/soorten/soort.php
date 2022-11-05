@@ -16,10 +16,10 @@ include("../../app3/individuals_query.php");
 $taxonId = $_GET["taxonId"];
 
 $images = array_merge(
-    commonsImages($taxonId, true),
+    //commonsImages($taxonId, true),
     uvaImages($taxonId),
     dijkshoornImages($taxonId),
-    commonsImages($taxonId)
+    //commonsImages($taxonId)
 );
 
 #foreach ($images as $row) {
