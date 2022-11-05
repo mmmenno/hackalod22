@@ -44,7 +44,7 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 
 <div id="hellothere" class="container">
 
-	<p class="lead">Collecties bevatten allerlei historische gegevens over <span class="bigger">landschappen</span>, afbeeldingen van <span class="bigger">soorten</span> en zelfs niet-menselijke <span class="bigger">individuen</span>, maar je moet ze wel kunnen vinden</p>
+	<p class="lead">Collecties bevatten historische gegevens over <span class="bigger">landschappen</span>, informatie over <span class="bigger">soorten</span> en zelfs niet-menselijke <span class="bigger">individuen</span>, maar je moet ze wel kunnen vinden</p>
 
 	<div class="row">
 		<div class="col-md-12">
@@ -82,8 +82,8 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 			gemaakt met:
 			
 			<ul>
-				<li>Topotijdreis kaartlagen</li>
-				<li>Polygonen van Naturalis API</li>
+				<li><a href="https://topotijdreis.nl/">Topotijdreis kaartlagen</a></li>
+				<li>Polygonen van <a href="https://api.biodiversitydata.nl/">Naturalis API</a></li>
 			</ul>
 
 		</div>
@@ -131,7 +131,9 @@ if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
 			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
 			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> | 
 			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> | 
-			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a>
+			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a> | 
+			<a href="app3/individu.php?individu=Q335860">Abul-Abbas</a> | 
+			<a href="app3/individu.php?individu=Q2679876">Crystal the Monkey</a>
 
 			<br /><br />
 			of bekijk individuen van een taxon uit de lijst

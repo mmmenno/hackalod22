@@ -12,7 +12,7 @@ include("options.php");
 // Wikidata info van dit individu ophalen
 
 $sparql = "
-SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work ?imbdId ?col ?wpen ?wpnl WHERE {
+SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?wpcolen ?dod ?img ?work ?workLabel ?imbdId ?col ?colLabel ?wpen ?wpnl ?wpworken WHERE {
   VALUES ?item { wd:" . $_GET['individu'] . " }
   ?item wdt:P10241 ?taxon .
   OPTIONAL {
@@ -25,13 +25,21 @@ SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work
     ?item wdt:P18 ?img .
   }
   optional {
-    ?item wdt:P1441 ?workLabel .
+    ?item wdt:P1441 ?work .
+    optional {
+	    ?work wdt:P345 ?imbdId .
+	  }
+	  optional{
+	    ?wpworken schema:about ?work .
+	    ?wpworken schema:isPartOf <https://en.wikipedia.org/> .
+	  }
   }
   optional {
-    ?item wdt:P345 ?imbdId .
-  }
-  optional {
-    ?item wdt:P195 ?colLabel .
+    ?item wdt:P195 ?col .
+	  optional{
+	    ?wpcolen schema:about ?col .
+	    ?wpcolen schema:isPartOf <https://en.wikipedia.org/> .
+	  }
   }
   optional{
     ?wpen schema:about ?item .
@@ -44,6 +52,9 @@ SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work
   SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
 }
 ";
+
+//echo wpcolenecho $sparql;
+//die;
 $endpoint = 'https://query.wikidata.org/sparql';
 
 $json = getSparqlResults($endpoint,$sparql);
@@ -110,15 +121,7 @@ foreach ($delpherdata as $key => $value) {
 
 
 <div class="contentcircle">
-<h1><a href="<?= $individu['item']['value'] ?>"><?= $individu['itemLabel']['value'] ?></a></h1>
 
-<p><?= $individu['itemDescription']['value'] ?></p>
-	
-<!--<?php if(isset($individu['colLabel']['value'])) ?>-->
-	
-<!--<?php if(isset($individu['workLabel']['value'])) ?>-->
-<!--hier moet de workLavels herhaalt worden als het individu in meerdere werken voorkomt-->
-	
 <?php if(isset($individu['wpnl']['value'])){ ?>
 	<a href="<?= $individu['wpnl']['value'] ?>">🇳🇱</a>
 <?php } ?>
@@ -127,15 +130,35 @@ foreach ($delpherdata as $key => $value) {
 	<a href="<?= $individu['wpen']['value'] ?>">🇬🇧</a>
 <?php } ?>
 
-<div class="dobd">
+<h1><a href="<?= $individu['item']['value'] ?>"><?= $individu['itemLabel']['value'] ?></a></h1>
+
+<p>
+	<?= $individu['itemDescription']['value'] ?><br />
+	
 	<?php if(isset($individu['dob']['value'])){ ?>
-		<br /><?= substr($individu['dob']['value'],0,4) ?>
+		🍼 <?= preg_replace("/^0/","",substr($individu['dob']['value'],0,4)) ?>
 	<?php } ?>
 
 	<?php if(isset($individu['dod']['value'])){ ?>
-		- <?= substr($individu['dod']['value'],0,4) ?>
+		 🪦 <?= preg_replace("/^0/","",substr($individu['dod']['value'],0,4)) ?>
 	<?php } ?>
-</div>
+
+</p>
+	
+<?php if(isset($individu['col']['value'])){ ?>
+in collectie van <br /><a target="_blank" href="<?= $individu['wpcolen']['value'] ?>"><?= $individu['colLabel']['value'] ?></a><br />
+<?php } ?>
+
+
+<?php if(isset($individu['wpworken']['value'])){ ?>
+komt voor in <br /><a target="_blank" href="<?= $individu['wpworken']['value'] ?>"><?= $individu['workLabel']['value'] ?></a><br />
+<?php } ?>
+	
+<?php if(isset($individu['imbdId']['value'])){ ?>
+<a target="_blank" href="https://www.imdb.com/title/<?= $individu['imbdId']['value'] ?>"><img style="width:38px;" src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" /></a><br />
+<?php } ?>
+	
+
 
 </div>
 
