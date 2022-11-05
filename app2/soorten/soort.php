@@ -10,6 +10,7 @@ include("uva.php");
 include("commons.php");
 include("dijkshoorn.php");
 include("nozeman.php");
+include("wikidata.php");
 
 include("../../app3/individuals_query.php");
 
@@ -21,6 +22,7 @@ $images = array_merge(
     nozemanImages($taxonId),
     dijkshoornImages($taxonId),
     //commonsImages($taxonId)
+    wikidataImages($taxonId)
 );
 
 #foreach ($images as $row) {
