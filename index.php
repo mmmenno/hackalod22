@@ -4,8 +4,16 @@ include("app3/functions.php");
 
 include("app3/options.php");
 
+$gebieden_data = "data/natura2000-met-wikidata.csv";
+$geboptions = "";
+if (($handle = fopen($gebieden_data, "r")) !== FALSE) {
+    while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            $geboptions .= "<option value=\"" . $row[0] ."\">" . $row[1] . "</option>\n";
+    }
+    fclose($handle);
+}
+
 ?>
-<!DOCTYPE html>
 <html>
 <head>
 	
@@ -26,7 +34,7 @@ include("app3/options.php");
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" integrity="sha512-wcw6ts8Anuw10Mzh9Ytw4pylW8+NAD4ch3lqm9lzAsTxg0GFeJgoAtxuCLREZSC5lUXdVyo/7yfsqFjQ4S+aKw==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==" crossorigin=""></script>
 
-     <link rel="stylesheet" href="styles.css" />
+     <link rel="stylesheet" href="assets/styles.css" />
 
 	
 	
@@ -58,6 +66,22 @@ include("app3/options.php");
 			<img src="tegennatuur.jpg" />
 			<p>Historische cartografie laat veranderingen in het landschap zien. Hoe zit dat met de omgeving van Natura2000 gebieden?</p>
 
+			<h4>ga rechtstreeks naar</h4>
+			<a href="app1/index.php?gebied=Q1910627">Binnenveld</a> | 
+			<a href="app1/index.php?gebied=Q2648552">Ulvenhoutse Bos</a> | 
+			<a href="app1/index.php?gebied=Q13731828">Ilperveld, Varkensland, Oostzanerveld & Twiske</a> | 
+			<a href="app1/index.php?gebied=Q5317510">Voornes Duin</a>
+
+			<h4>of kies een gebied</h4>
+			<form action="app1/" method="get">
+
+			<select name="gebied" onchange="this.form.submit()">
+				<option value=""> -- kies een gebied -- </option>
+				<?= $geboptions ?>
+			</select>
+
+			</form>
+
 			<h3>Gebruikte datasets</h3>
 			
 			<ul>
@@ -72,6 +96,22 @@ include("app3/options.php");
 
 			<img src="florafauna.jpg" />
 			<p>Buiten de gemeente Utrecht zijn 9.782 vermeldingen gevonden van 1.303 verschillende straten.</p>
+
+			<h4>ga rechtstreeks naar</h4>
+			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
+			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> | 
+			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> | 
+			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a>
+
+			<h4>of kies een taxon</h4>
+			<form action="app3/taxon.php" method="get">
+
+			<select name="taxonid" onchange="this.form.submit()">
+				<option value=""> -- kies een taxon -- </option>
+				<?= $options ?>
+			</select>
+
+			</form>
 
 			<h3>Gebruikte datasets</h3>
 			
@@ -90,14 +130,18 @@ include("app3/options.php");
 
 			<p>Erfgoedinstellingen zijn doorgaans nogal antropocentrisch beschreven. Wordt het geen tijd de cartesiaanse scheiding tussen mens en natuur af te breken?</p>
 
+
+			<h4>ga rechtstreeks naar</h4>
 			<a href="app3/individu.php?individu=Q115004786">Tanja</a> | 
 			<a href="app3/individu.php?individu=Q115003515">Herman jr.</a> | 
 			<a href="app3/individu.php?individu=Q107120526">Wonderboom Elswout</a> | 
 			<a href="app3/individu.php?individu=Q15943299">Duizendjarige Den</a>
 
+			<h4>of kies een taxon</h4>
 			<form action="app3/taxon.php" method="get">
 
 			<select name="taxonid" onchange="this.form.submit()">
+				<option value=""> -- kies een taxon -- </option>
 				<?= $options ?>
 			</select>
 
