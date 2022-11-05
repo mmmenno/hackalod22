@@ -25,10 +25,10 @@ SELECT ?item ?itemLabel ?itemDescription ?taxon ?taxonLabel ?dob ?dod ?img ?work
     ?item wdt:P18 ?img .
   }
   optional {
-    ?item wdt:1441 ?work .
+    ?item wdt:1441 ?workLabel .
   }
   optional {
-    ?item wdt:195 ?col .
+    ?item wdt:195 ?colLabel .
   }
   optional{
     ?wpen schema:about ?item .
